@@ -8,7 +8,7 @@
 			<span>월 사용 요금</span>
 			<span class="c_red01 bold2 priceDet">29,000원</span>
 		</div>
-		<a class="joinBtn dp_f dp_c dp_cc c_w blue01" href="" title="가입하기">가입하기</a>
+		<a class="joinBtn dp_f dp_c dp_cc c_w blue01" href="../member/joinPrice_step1.php" title="가입하기">가입하기</a>
 	</div>
 </div>
 

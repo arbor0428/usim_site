@@ -24,8 +24,8 @@
 							<li><a href="/sub07/sub01.php" title="">1:1 상담</a></li>
 						</ul>
 						<div class="memberBtnWrap dp_f">
-							<a class="dp_f dp_c dp_cc memberBtn blue01 c_w" href="" title="로그인">로그인</a>
-							<a class="dp_f dp_c dp_cc memberBtn c_blue" href="" title="회원가입">회원가입</a>
+							<a class="dp_f dp_c dp_cc memberBtn blue01 c_w" href="../member/login.php" title="로그인">로그인</a>
+							<a class="dp_f dp_c dp_cc memberBtn c_blue" href="../member/join.php" title="회원가입">회원가입</a>
 						</div>
 					</div>
 				</div>
