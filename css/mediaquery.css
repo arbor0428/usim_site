@@ -1,0 +1,930 @@
+@media (max-width:1023px){
+    /*메인페이지*/
+    .container .sec01 .v_twoBtn a {
+        width: 49%; 
+        font-size: 1.5rem;
+    }
+    .whtBox .threeBox .sBox {
+        padding: 22px;
+    }
+    .whtBox .whtBox_bot .disc01 {
+        font-size: 2rem;
+    }
+    .whtBox .whtBox_bot .disc02 {
+        margin-right: 30px;
+        font-size: 2.375rem;
+    }
+    .whtBox .whtBox_bot .monPrice {
+        font-size: 1.5rem;
+    }
+    .container .sec05 .cardSlide {
+        height: 440px;
+    }
+    .container .sec06 .payWay li {
+        padding: 20px 0;
+    }
+    .container .sec06 .payWay li a {
+        font-size:1.5rem;
+    }
+    
+    footer .f_bot .f_addr li .firWid {
+        width: 34%;
+    }
+
+    /*요금제 상세페이지*/
+    .fixed-bnr_always .priceShow span {
+		font-size: 1.5rem;
+	}
+
+    /*요금제 가입하기*/
+    .subWrap02 .joinStepShow .txt {
+        padding: 10px 17px;
+    }
+    .subWrap02 .joinStepShow .line {
+        width: 20px;
+    }
+    .subWrap02 .pricekindTit {
+        display: block;
+    }
+    .subWrap02 .priceImgWrap {
+        width: 100%;
+    }
+    .subWrap02 .kindtitWrap {
+        margin-top: 15px;
+        display: block;
+    }
+    .subWrap02 .kindtitWrap .kindShowtit {
+        display: -webkit-box; 
+        display: -ms-flexbox; 
+        display: flex;
+        -webkit-box-align: center; 
+        -ms-flex-align: center; 
+        align-items: center;
+        -webkit-box-pack: justify; 
+        -ms-flex-pack: justify; 
+        justify-content: center;
+    }
+    .subWrap02 .kindShowtit .prepay {
+        margin-bottom: 0 !important;
+        font-size: 1rem;
+    }
+    .subWrap02 .kindShowtit .pay_tit {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width:760px) {
+    /*메인페이지*/
+    .header .h_top {
+        height: 60px;
+    }
+    .header .logo {
+        margin-left: -41px;
+    }
+    .header .logo img {
+        height: 40px;
+    }
+    .goog-te-gadget-simple {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .goog-te-gadget-simple .goog-te-menu-value span {
+        font-size: 1rem;
+    }
+    .goog-te-gadget-icon {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    .m-btn {
+        width: 28px; 
+        height: 32px;
+    }
+    .m-btn .bar_top, .m-btn .bar_mid, .m-btn .bar_bot {
+        width: 30px;
+    }
+    .header.openFull .m-btn .bar_top {
+        width: 30px;
+    }
+    .header.openFull .m-btn .bar_mid {
+        top: 26px;
+        width: 31px;
+    }
+    .h_bot {
+        padding: 15px 0;
+    }
+    .h_bot .fav_menu li a {
+        font-size: 1.125rem;
+    }
+    .m_logo img {
+        height: 40px;
+    }
+    .m-nav {
+        margin-top: 50px;
+    }
+    .m-navWrap .m-navbox {
+        width: 86%;
+        padding: 80px 25px 0;
+    }
+    .m-nav li a {
+        font-size: 1.250rem;
+    }
+    .memberBtnWrap .memberBtn {
+        width: 48%;
+        height: auto;
+        padding: 10px 0;
+        font-size: 1.250rem;
+    }
+    .container .sec01 {
+        margin-top: 100px;
+    }
+    .container .sec01 .v_twoBtn a {
+        padding: 15px 0;
+        font-size:1.250rem;
+    }
+    .container .sec01 .slick-dots {
+        bottom: 14px !important;
+    }
+    .container .slick-dots li {
+        width: 9px !important;
+        height: 9px !important;
+    }
+    .container .slick-dots li button {
+        width: 9px !important;
+        height: 9px !important;
+    }
+    .container .slick-dots li button:before {
+        font-size: 13px !important;
+        width: 9px !important;
+        height: 9px !important;
+    }
+    .whtBox .whtInner {
+        padding: 20px 3%;
+    }
+    .whtBox .threeBox {
+        margin-bottom: 20px;
+    }
+    .whtBox .whtBox_top {
+        margin-bottom: 20px;
+    }
+    .whtBox .whtBox_top .pay_tit {
+        font-size: 1.5rem;
+    }
+    .whtBox .condition {
+        margin-bottom: 20px;
+    }
+    .container .sec01 .v_twoBtn a {
+        margin: 0;
+    }
+    .whtBox .whtBox_top .prepay {
+        padding: 5px 17px;
+    }
+    .whtBox .whtBox_top .best {
+        padding: 5px 17px;
+    }
+    .whtBox .whtBox_bot .monPrice {
+        font-size: 1.250rem;
+    }
+
+    .moreBtn {
+        font-size: 1.375rem;
+    }
+    .submitBtn {
+        font-size: 1.375rem;
+    }
+
+    .container .sec03 .whtBox .slider_tit {
+        font-size: 1.5rem;
+    }
+    
+    .container .sec03 .whtBox .payBtnWrap label {
+        padding: 15px 0;
+        font-size: 1.375rem;
+    }
+
+    .whtBox .whtBox_bot .disc01 {
+        margin-right: 13px;
+        font-size: 1.5rem;
+    }
+
+    .whtBox .whtBox_bot .disc02 {
+        margin-right: 15px;
+        font-size: 2rem;
+    }
+
+    .container .sec05 .wht_detail {
+        margin-top: 20px;
+        font-size: 1.375rem;
+    }
+
+    .container .sec06 .normalTit {
+        margin-top: 20px;
+    }
+    
+    .container .sec06 .priceResult {
+        margin-top: 20px; 
+    }
+    .container .sec06 .priceResult .priceRes01 {
+        margin-bottom: 5px;
+        font-size: 2.125rem;
+    }
+    .container .sec06 .priceResult .priceRes02 {
+        font-size: 1rem;
+    }
+    .container .sec08 .newsBox .newsCont li .newsTit .tit {
+        font-size: 1.375rem;
+    }
+    .container .sec08 .newsBox .newsCont li .newsTit .date {
+        font-size: 1.125rem;
+    }
+    footer .f_comNm {
+        display: none;
+    }
+    footer .f_top {
+        display: block;
+    }
+    footer .f_bot .borbot {
+        display: none;
+    }
+    footer .f_bot .borbot_m {
+        display: block;
+    }
+    footer .f_bot .f_comNm_m {
+        display: block;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #fff;
+        font-size: 1.5rem;
+    }
+    footer .f_bot .f_addr li {
+        -webkit-box-pack: justify; 
+        -ms-flex-pack: justify; 
+        justify-content: center;
+    }
+    footer .f_bot .f_addr li .firWid {
+        width: auto;
+    }
+    footer .f_bot .f_addr li .firWid.adr {
+        display: none;
+    }
+    footer .f_bot .f_addr li.m_none {
+        display:none;
+    }
+    footer .f_bot .f_addr li .m_show {
+        display: inline-block;
+    }
+
+
+    /*요금제 상세페이지*/
+    .subWrap {
+		padding: 150px 0;
+	}
+	.fixed-bnr_always {
+		height: 80px;
+	}
+	.fixed-bnr_always .joinBtn {
+		border-radius: 15px;
+		font-size: 1rem;
+		padding: 10px 50px;
+	}
+	.fixed-bnr_always .priceShow span {
+		font-size: 1.125rem;
+	}
+	.subWrap .kindDetailWrap li span {
+		font-size: 1.125rem;
+	}
+	.subWrap .toggleBtn .line {
+		width: 30%;
+	}
+	.subWrap .toggleBtn .centerCir {
+		font-size: 1.125rem;
+		padding: 15px 0;
+		width: 40%;
+	}
+	.subWrap .subtable tr th, 
+	.subWrap .subtable tr td {
+		font-size: 1rem;
+	}
+	.subWrap .toggleCont {
+		font-size: 1rem;
+	}
+	.subWrap .toggleCont .pSub_tit {
+		font-size: 1.125rem;
+	}
+	.subWrap .dotlist li {
+		font-size: 1rem;
+	}
+	.subWrap .dotlist li a {
+		font-size: 0.875rem;
+	}
+	.subWrap .toggleCont .pSub_tit2 {
+		font-size: 1.250rem;
+	}
+	.subWrap .toggleCont .pSub_det {
+		font-size: 1rem;
+	}
+	.subWrap .kindBtnWrap .kindTit {
+		font-size: 1.5rem;
+	}
+	.subWrap .kindBtnWrap .kindBox li span {
+		font-size: 1rem;
+	}
+	.subWrap .kindBtnWrap .kindBox li label {
+		padding: 10px 0;
+		font-size: 1rem;
+	}
+	.subWrap .stepwhtBox .step_tit {
+		font-size: 1.5rem;
+	}
+	.subWrap .toggleCont .stepWrap .stepBx {
+		font-size: 1.250rem;
+	}
+	.subWrap .toggleCont .stepWrap span {
+		font-size: 1.250rem;
+	}
+	.subWrap .stepwhtBox .step_txt p {
+		font-size: 1.125rem;
+	}
+
+    /*요금제 가입하기*/
+    .subWrap02 {
+        padding: 117px 0;
+    }
+    .subWrap02 h3 {
+        padding: 40px 0 20px 0;
+    }
+    .subWrap02 input[type=checkbox] + label {
+        font-size: 1rem;
+        letter-spacing: -1px;
+    }
+    .joinWrap02 .chkAllDet {
+        font-size: 1rem;
+        letter-spacing: -1px;
+    }
+    .joinWrap02 .yesLnk .showCon {
+        font-size: 0.875rem;
+    }
+    .subWrap02 .joinWrap02 {
+        padding: 30px 15px;
+    }
+    .subWrap02 .joinStepShow .txt {
+        font-size: 0.875rem;
+    }
+    .subWrap02 .joinSubTit {
+        padding: 40px 0 40px 25px;
+        font-size: 1.250rem;
+    }
+    .subWrap02 .kindBtnWrap .kindBox {
+        padding: 0;
+    }
+    .subWrap02 .kindBtnWrap .kindBox.mb40 {
+        margin-bottom: 40px;
+    }
+    .subWrap02 .kindBtnWrap .kindBox li span {
+        font-size: 1.250rem;
+    }
+    .subWrap02 .kindBtnWrap .kindBox li label {
+        padding: 10px 0;
+        font-size: 1rem;
+    }
+    .cardExam .cardImgshow {
+        display: block;
+    }
+    .cardExam .imgwrap {
+        width: 100%;
+    }
+    .cardExam .txtBox {
+        margin: 30px 0;
+        width: 100%;
+    }
+    .cardExam .txtBox > p {
+        font-size: 1rem;
+    }
+    .cardExam .needInfo {
+        font-size: 1rem;
+    }
+
+    /*로그인*/
+    .l_center {
+        width: 90%;
+    }
+    .l_center .loginBotWrap01 {
+        padding-top: 20px;
+    }
+
+}
+
+@media (max-width:575px) {
+    /*메인페이지*/
+    html, body {
+        font-size: 14px;
+    }
+	.slickslider02 .slick-next, 
+	.slickslider02 .slick-prev {
+		top: 40% !important;
+	}
+	.slickslider02 .slick-next, 
+	.slickslider02 .slick-prev {
+		width: 45px;
+		height: 45px;
+	}
+    .fixed-bnr {
+        height: 70px;
+    }
+    .callBtn {
+        bottom: 95px;
+    }
+
+    .fixed-bnr .fixed-menu li a p {
+        font-size: 0.875rem;
+    }
+    .fixed-bnr .fixed-menu li a img {
+        height: 25px;
+    }
+    .h_center {
+        width: 92%;
+    }
+    .m-nav li a {
+        font-size: 1.125rem;
+    }
+    .memberBtnWrap .memberBtn {
+        font-size: 1.125rem;
+    }
+    .c_center {
+        width: 92%;
+    }
+    section {
+        padding: 35px 0;
+    }
+    .header .logo img {
+        height: 30px;
+    }
+    .goog-te-gadget-simple .goog-te-menu-value span:nth-child(1) {
+        display: none;
+    }
+    .goog-te-gadget-simple .goog-te-menu-value span {
+        margin: 0 !important;
+    }
+    .goog-te-gadget-icon {
+        width: 17px !important;
+        height: 17px !important;
+    }
+    .m_logo img {
+        height: 36px;
+    }
+    .h_bot .fav_menu li a {
+        margin-right: 25px;
+    }
+    .m-btn {
+        height: 29px;
+    }
+    .m-btn .bar_top, .m-btn .bar_mid, .m-btn .bar_bot {
+        height: 3px;
+    }
+    .sub_tit {
+        margin-bottom: 20px;
+        font-size: 1.75rem;
+    }
+    .sub_tit span {
+        margin-top: 8px;
+        font-size: 1rem;
+    }
+    .sub_tit02 {
+        font-size: 1.75rem;
+    }
+    .container .sec01 .v_twoBtn a {
+        padding: 15px 0;
+        font-size: 1rem;
+        transform: skew(0.03deg);
+    }
+    .whtBox {
+        padding: 20px 0 0 0;
+        border-radius: 8px;
+    }
+    .whtBox .whtBox_top {
+        margin-bottom: 9px;
+    }
+    .whtBox .whtBox_top .pay_tit {
+        margin-left: 10px;
+        font-size: 1.125rem;
+    }
+    .whtBox .whtBox_top .prepay {
+        font-size: 1rem;
+        transform: skew(0.03deg);
+    }
+    .whtBox .whtBox_top .best {
+        padding: 5px 14px;
+        font-size: 1rem;
+        transform: skew(0.03deg);
+    }
+    .whtBox .whtInner {
+        padding: 5px 4%;
+    }
+    .whtBox .whtInner.whtBox_bot {
+        padding: 15px 3%;
+    }
+    .whtBox .condition {
+        margin-bottom: 14px;
+        padding: 15px 10px;
+        border-radius: 8px;
+    }
+    .whtBox .threeBox {
+        margin-bottom: 10px;
+    }
+    .whtBox .threeBox .sBox {
+        padding: 22px 0;
+        width: 32.333%;
+        border-radius: 8px;
+    }
+    .whtBox .threeBox .sBox .sDet01 {
+        margin-bottom: 5px;
+        font-size: 1.250rem;
+    }
+    .whtBox .threeBox .sBox .sDet02 {
+        margin-bottom: 5px;
+        font-size: 1.250rem;
+    }
+    .whtBox .threeBox .sBox .sDet03 {
+        font-size: 0.875rem;
+        transform: skew(0.03deg);
+    }
+    .whtBox .condition .condi_scroll p {
+        font-size: 1rem;
+        transform: skew(0.03deg);
+    }
+    .whtBox .whtBox_bot .monPrice {
+        font-size: 1.125rem;
+    }
+    .whtBox .whtBox_bot .monPrice span {
+        margin-right: 7px;
+        margin-left: 6px;
+    }
+    .whtBox .whtBox_bot .disc01 {
+        margin-right: 5px;
+        font-size: 1.250rem;
+    }
+    .whtBox .whtBox_bot .disc02 {
+        font-size: 1.65rem;
+    }
+    .whtBox .whtBox_bot .discount .lnr-chevron-right {
+        font-size: 1.125rem;
+        margin-top: 3px;
+    }
+    .whtBox .whtBox_bot .disc02 {
+        margin-right: 4px;
+    }
+    .moreBtn {
+        padding: 12px 0;
+        margin: 20px auto 0;
+        font-size: 1rem;
+        width: 160px;
+    }
+    .container .sec01 .slickslider {
+        isolation: isolate;
+        border-radius: 8px;
+    }
+    .container .sec03 .whtBox .payBtnWrap label {
+        margin: 0 1%;
+        font-size: 1rem;
+    }
+    .container .sec03 .whtBox .slider_tit {
+        font-size: 1.250rem;
+    }
+    .container .sec03 .whtBox .slidebar_tit li {
+        font-size: 0.875rem;
+    }
+    .container .sec03 .whtBox .slider-cont {
+        padding: 20px 0;
+    }
+    .container .sec05 .cardSlide {
+        height: auto;
+        width: 95%;
+    }
+    .container .sec05 .cardSlide .cardImg {
+        border-radius: 8px;
+    }
+    .container .sec05 .slick-dots {
+        bottom: -15px !important;
+    }
+    .container .sec05 .wht_detail {
+        margin-bottom: 30px;
+        font-size: 1rem;
+    }
+    .submitBtn {
+        margin: 40px auto 10px;
+        padding: 15px 0;
+        font-size: 1.125rem;
+    }
+    .container .sec06 .payWay {
+        margin: 20px 0 30px 0;
+    }
+    .container .sec06 .submitBtn {
+        margin: 20px auto 15px;
+    }
+    .container .sec06 .remPhone label {
+        font-size: 1rem;
+    }
+    input[type=checkbox] + label {
+        padding-left: 25px;
+        background-size: 18px 18px;
+    }
+    .container .sec06 .normalTit {
+        margin-top: 5px;
+        font-size: 1.125rem;
+    }
+    .container .sec06 .priceResult {
+        margin-top: 5px;
+    }
+    .container .sec06 .priceResult .priceRes01 {
+        font-size: 1.875rem;
+    }
+    .container .sec06 .priceResult .priceRes02 {
+        font-size: 0.875rem;
+    }
+    .container .sec06 .payWay li {
+        padding: 15px 0;
+    }
+    .container .sec06 .payWay li a {
+        font-size: 1rem;
+    }
+
+    .container .sec06 .phoneWrap input[type="text"] {
+        padding: 15px;
+    }
+
+    .container .sec07 .eventImg {
+        border-radius: 8px;
+    }
+
+    .container .sec08 .newsBox .newsTop p {
+        font-size: 1.375rem;
+    }
+
+    .container .sec08 .newsBox .newsTop .n_moreBtn {
+        width: 18px;
+    }
+
+    .container .sec08 .newsBox .newsCont {
+        margin-top: 10px;
+    }
+
+    .container .sec08 .newsBox .newsCont li .newsTit .tit {
+        font-size: 1.125rem;
+    }
+
+    .container .sec08 .newsBox .newsCont li .newsTit .date {
+        font-size: 1rem;
+    }
+    
+    .container .sec09 .qnaBtn span {
+        font-size: 1.375rem;
+    }
+    .container .sec09 .qnaBtn {
+        background-size: 40px 40px;
+    }
+
+    footer {
+        padding: 35px 0 60px 0;
+    }
+
+    footer .f_top {
+        padding-bottom: 20px;
+    }
+
+    footer .f_top span {
+        margin-bottom: 10px;
+        font-size: 1.375rem;
+    }
+
+    footer .f_top span:nth-child(2) {
+        font-size: 1.125rem;
+    }
+
+    footer .f_bot .f_menu li a {
+        margin-right: 10px;
+        font-size: 1rem;
+    }
+    footer .f_comInfo {
+        margin-top: 20px;
+    }
+    footer .f_bot .f_comNm_m {
+        margin-bottom: 30px;
+        font-size: 1.125rem;
+    }
+    footer .f_bot .f_addr li {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    footer .f_bot .f_addr li span {
+        font-size: 1rem;
+    }
+
+    /*요금제 상세페이지*/
+    .m_br {
+        display: block;
+    }
+    .mb_scroll {
+		position: relative;
+		width: 100%;
+		overflow: auto;
+	}
+	.tbl_basic {
+		width: 800px;
+	}
+	.scroll_detail {
+		display: block;
+	}
+	.subWrap .toggleBtn .line {
+		width: 23%;
+	}
+	.subWrap .toggleBtn .centerCir {
+		padding: 10px 0;
+		width: 54%;
+	}
+	.subWrap .kindBtnWrap .kindTit {
+		padding: 10px 25px;
+		font-size: 1.375rem;
+	}
+	.subWrap .kindBtnWrap .kindBox {
+		padding: 20px 25px;
+	}
+	.subWrap .kindBtnWrap .kindBox li span {
+		width: 26%;
+	}
+	.subWrap .kindBtnWrap .kindBox li label {
+		width: 34%;
+	}
+	.subWrap .toggleCont .pSub_tit {
+		margin: 25px 0 10px 0;
+	}
+	.subWrap .toggleCont {
+		padding: 40px 0;
+	}
+	.subWrap .toggleCont .stepWrap {
+		margin: 22px 0;
+		display: block;
+	}
+	.subWrap .toggleCont .stepWrap .stepBx {
+		margin-right: 0;
+		font-size: 1.125rem;
+	}
+	.subWrap .toggleCont .stepWrap span {
+		display: block;
+		margin-top: 20px;
+		font-size: 1.250rem;
+		text-align: center;
+	}
+	.subWrap .toggleCont .pSub_tit {
+		font-size: 1rem;
+	}
+	.subWrap .stepwhtBox .step_tit {
+		margin-bottom: 20px;
+		font-size: 1.125rem;
+	}
+	.subWrap .stepwhtBox .step_txt {
+		margin-top: 10px;
+	}
+	.subWrap .stepwhtBox .step_txt p {
+		font-size: 1rem;
+	}
+	.subWrap .stepwhtBox .step_txt.m_60 {
+		margin-bottom: 60px !important;
+	}
+	.subWrap .t_titWrap {
+		font-size: 1.250rem;
+	}
+	.fixed-bnr_always .priceShow span {
+		font-size: 1rem;
+	}
+	.fixed-bnr_always .priceShow .priceDet {
+		font-size: 1.5rem;
+		margin-left: 6px;
+	}
+	.fixed-bnr_always .joinBtn {
+		padding: 10px 30px;
+	}
+	.subWrap .stepwhtBox {
+		margin-bottom: 60px;
+	}
+
+	.m_hght img {
+		height: 117px;
+	}
+
+    /*요금제 가입하기*/
+    .subWrap02 .joinStepShow {
+        display: none;
+    }
+    .subWrap02 .m_joinStepShow {
+        display: flex;
+    }
+    .subWrap02 .step_tit {
+        display: block;
+        margin-top: 20px;
+        font-size: 1.125rem;
+        font-weight: 700;
+        background-color: #e3f2ff;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .subWrap02 .kindBtnWrap .kindBox li span {
+        width: 26%;
+    }
+    .subWrap02 .kindBtnWrap .kindBox li label {
+        margin-bottom: 0;
+        width: 32%;
+    }
+    .subWrap02 .kindBtnWrap.mb_20 .kindBox li label {
+        margin-bottom: 10px;
+    }
+    .subWrap02 .inputWrap {
+        margin: 0 0 20px 0;
+    }
+    .l_center .f_inputWrap {
+        margin: 0 0 50px 0;
+    }
+    .subWrap02 .inputWrap input[type=text], 
+    .subWrap03 .inputWrap input[type=text] {
+        font-size: 1rem;
+    }
+    .subWrap02 input[type=date] {
+        font-size: 1rem;
+    }
+    .subWrap02 .wht01.m-p0 {
+        padding-top: 0 !important;
+    }
+    .subWrap02 .wht01.m-m0 {
+        margin-top: 0 !important;
+    }
+    .subWrap02 .cetifiTit {
+        font-size: 1.250rem;
+    }
+    .subWrap02 .dotlist {
+        margin-top: 0;
+    }
+    .subWrap02 .dotlist li {
+        font-size: 1rem;
+    }
+    .subWrap02 .prehopeNmBx {
+        border-radius: 15px;
+        padding: 0 15px 40px;
+    }
+    .wht01.m-p50 {
+        padding-top: 50px !important;
+    }
+    .wht01.m_p40 {
+        padding-bottom: 40px !important;
+    }
+    .selectContWrap .selectTop {
+        padding: 15px 0;
+    }
+    .selectContWrap .selectTop p {
+        font-size: 1.125rem;
+    }
+    .selectContWrap .selectTop .close {
+        font-size: 1.375rem;
+    }
+    .selectContWrap .selectBot .joinBtn p {
+        font-size: 1rem;
+    }
+    .selectContWrap .selectBot .joinBtn span {
+        font-size: 0.875rem;
+    }
+    .showWayWrap .showWayBox {
+        border-radius: 15px;
+        padding: 40px 20px;
+    }
+    .showWayWrap .showWayBox .showWayTit {
+        font-size: 1rem;
+    }
+
+    .subWrap02 .items dl {
+        font-size: 1rem;
+    }
+    .subWrap02 .priceTotal span {
+        font-size: 1.250rem;
+    }
+    .subWrap02 .perRequest {
+        font-size: 1.250rem;
+    }
+    .subWrap02 .perRequest .nm {
+        margin-right: 8px;
+        font-size:1.625rem;
+    }
+    .minibx.m_45 {
+        margin-bottom: 15px !important;
+    }
+    .minibx.m_lineChg span {
+        margin-top: 5px;
+        font-size: 0.875rem;
+    }
+
+    .subtable tr th,
+    .subtable tr td {
+        font-size: 1rem;
+    }
+
+
+}
+
