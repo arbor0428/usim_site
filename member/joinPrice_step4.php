@@ -36,8 +36,8 @@
 				결제를 진행해 주세요.
 			</p>
 			<div class="dp_f pricekindTit">
-				<div class="priceImgWrap gry01">
-					<img src="" alt="요금제 상세 이미지">
+				<div class="priceImgWrap">
+					<img src="../images/card1.png" alt="요금제 상세 이미지">
 				</div>
 				<div class="dp_f dp_c kindtitWrap">
 					<div class="kindShowtit">
@@ -134,8 +134,8 @@
 					<li class="dp_sb dp_c">
 						<label class="dp_sb dp_c dp_cc txt-c" for="c_box3_1"><input type="radio" name="c_box3" id="c_box3_1" onclick="c_box3(this.name,0);">신용카드 자동납부</label>
 						<label class="dp_sb dp_c dp_cc txt-c" for="c_box3_2"><input type="radio" name="c_box3" id="c_box3_2" onclick="c_box3(this.name,1);">은행계좌 자동이체</label>
-						<label class="dp_sb dp_c dp_cc txt-c" for="c_box3_3"><input type="radio" name="c_box3" id="c_box3_3" onclick="c_box3(this.name,2);">한패스 자동납부</label>
-						<label class="dp_sb dp_c dp_cc txt-c" for="c_box3_4"><input type="radio" name="c_box3" id="c_box3_4" onclick="c_box3(this.name,3);">한패스 자동납부</label>
+						<label class="dp_sb dp_c dp_cc txt-c" for="c_box3_3"><input type="radio" name="c_box3" id="c_box3_3" onclick="c_box3(this.name,2);">가상계좌 입금</label>
+						<label class="dp_sb dp_c dp_cc txt-c" for="c_box3_4"><input type="radio" name="c_box3" id="c_box3_4" onclick="c_box3(this.name,3);">한패스 결제</label>
 					</li>
 				</ul>
 				<ul class="dotlist m_45">
@@ -150,7 +150,7 @@
 					<input id="regiPer" type="text" placeholder="MMYY">
 				</div>
 			</div>
-			<a class="submitBtn gradient c_w" href="" title="결제하기">결제하기</a>
+			<a class="submitBtn gradient c_w" href="./joinPrice_step5.php" title="결제하기">결제하기</a>
 		</div>
 	</div>
 </div>

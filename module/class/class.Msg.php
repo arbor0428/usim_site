@@ -1,9 +1,9 @@
- <?
+  <?
   class Msg
   {
 	 function backMsg($msg){
 		 echo "<script language=\"javascript\">";
-		 echo "	alert('".$msg."');";
+		 echo "	alert(\"".$msg."\");";
 		 echo "	history.back();";
 		 echo "</script>";
 	 }
@@ -105,12 +105,6 @@
 	 function GblMsgBoxCloseParent($cname){
 		 echo "<script language=\"javascript\">";
 		 echo "window.parent.$('.".$cname."').click();";
-		 echo "</script>";
-	 }
-	 
-	 function goMagParent($url){
-		 echo "<script language=\"javascript\">";
-		 echo "	location.href=\"".$url."\";";
 		 echo "</script>";
 	 }
   }

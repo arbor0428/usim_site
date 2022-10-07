@@ -46,8 +46,8 @@
 				신청서를 확인해 주세요.
 			</p>
 			<div class="dp_f pricekindTit">
-				<div class="priceImgWrap gry01">
-					<img src="" alt="요금제 상세 이미지">
+				<div class="priceImgWrap">
+					<img src="../images/card1.png" alt="요금제 상세 이미지">
 				</div>
 				<div class="dp_f dp_c kindtitWrap">
 					<div class="kindShowtit">
@@ -107,7 +107,9 @@
 			<p>* 제휴 카드 납부 시 전월 사용 실적에 따라 월 요금에서 추가 할인됩니다.</p>
 		</div>
 	</div>
-	<!--후불 가입 일 때 보여야 함-->
+	
+	<!--후불 가입 일 때 나타나야함-->
+	<p style="font-weight: 700; color: #ff0000;">후불가입 일 때 나타나는 영역(지워질 글입니다.)</p>
 	<div class="wht01 p-72 p_50 m_28 m-p50">
 		<div class="c_center">
 			<p class="minibx">명세서 유형/납부방법</p>
@@ -129,7 +131,7 @@
 			</table>
 		</div>
 	</div>
-
+	<!--후불 가입 일 때 나타나야함-->
 
 	<div class="wht01 p-72 p_50 m_28 m-p50">
 		<div class="c_center">

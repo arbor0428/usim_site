@@ -9,7 +9,7 @@
 				<p class="cetifiTit bold2">본인 확인 요청이 전송되었습니다.</p>
 				<p class="cetifiCont c_gry">본인인증이 완료된 후 현재 페이지로 돌아와 아래의 (인증완료) 버튼을 눌러주세요</p>
 			</div>
-			<a class="submitBtn gradient c_w" href="" title="인증 완료">인증 완료</a>
+			<a class="submitBtn gradient c_w" href="./joinPrice_step3.php" title="인증 완료">인증 완료</a>
 		</div>
 	</div>
 </div>

@@ -92,6 +92,7 @@
 	</div>
 
 	<!--선불 가입 일 때 나타나야함-->
+	<p style="font-weight: 700; color: #ff0000;">선불 가입 일 때 나타나는 영역(지워질 글입니다.)</p>
 	<div class="wht01 p-50 p_50 m_28 m-p50">
 		<div class="c_center">
 			<div class="prehopeNmBx gry01">
@@ -108,11 +109,13 @@
 					<li>희망번호를 입력하지 않은 경우 임의의 번호로 부여됩니다.</li>
 				</ul>
 			</div>
-			<a class="submitBtn gradient c_w" href="" title="다음">다음</a>
+			<a class="submitBtn gradient c_w" href="./joinPrice_step4.php" title="다음">다음</a>
 		</div>
 	</div>
+	<!--선불 가입 일 때 나타나야함-->
 
 	<!--후불 가입 일 때 나타나야함-->
+	<p style="font-weight: 700; color: #ff0000;">후불가입 일 때 나타나는 영역(지워질 글입니다.)</p>
 	<div class="wht01 p_50 m_28 m-p0">
 		<div class="c_center">
 			<p class="joinSubTit">요금을 납부할 방법을 선택하세요.</p>
@@ -136,9 +139,12 @@
 					<label class="minibx" for="regiPer">유효 기간</label>
 					<input id="regiPer" type="text" placeholder="MMYY">
 				</div>
+				<a class="submitBtn gradient c_w" href="./billReceive.php" title="다음">다음</a>
 			</div>
 		</div>
 	</div>
+	<!--후불 가입 일 때 나타나야함-->
+
 </div>
 
 <script>

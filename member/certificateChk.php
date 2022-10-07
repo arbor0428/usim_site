@@ -58,7 +58,7 @@
                     <img src="../images/usimChk.png" alt="유심 일련번호">
                 </div>
             </div>
-            <a class="submitBtn gradient c_w" href="" title="번호 이동 인증 입력">번호 이동 인증 입력</a>
+            <a class="submitBtn gradient c_w" href="./certiChkFinish.php" title="번호 이동 인증 입력">번호 이동 인증 입력</a>
         </div>
     </div>
 

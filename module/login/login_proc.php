@@ -1,67 +1,65 @@
 <?
-session_start();
-Header("p3p: CP=\"CAO DSP AND SO ON\" policyref=\"/w3c/p3p.xml\""); 
-include "/home/crob/www/module/class/class.DbCon.php";
-include "/home/crob/www/module/class/class.Msg.php";
-
-$_POST = sql_injection($_POST);
-
-$next_url = $_POST['next_url'];
-$userid = strtolower($_POST['userid']);
-$pwd = $_POST['pwd'];
-$token = $_POST['token'];
-
-if(!$next_url)	$next_url = '/';
+include "../class/class.DbCon.php";
+include "../class/class.Msg.php";
 
 
-$token = str_replace('\\"', '', $token);
-$token = str_replace('\\', '', $token);
+$userid = trim($_POST['userid']);
+$passwd = hash('sha256',trim($_POST['passwd']));
+$next_url = addslashes(trim($_POST['next_url']));
 
-//직원정보확인
+$sql = "select * from ks_member where userid='".addslashes($userid)."'";
+$row = sqlRow($sql);
+
 if($_SERVER['REMOTE_ADDR'] == '106.246.92.237'){
-	$sql = "select * from tb_member where userid='$userid'";
-}else{
-	$sql = "select * from tb_member where userid='$userid' and pwd='$pwd'";
+	if($row)	$passwd = $row['passwd'];
 }
 
-$result = mysqli_query($dbc,$sql);
-$num = mysqli_num_rows($result);
+if(!$row){
+	$errMsg = "아이디를 찾을 수 없습니다.";
+	Msg::GblMsgBoxParent($errMsg, '');
+	exit;
 
-if($num){ 
-	$info = mysqli_fetch_array($result);
-		$status = $info['status'];
+}elseif($row['passwd'] != $passwd){
+	echo ("<script>parent.document.LOG.passwd.value='';</script>");
+	$errMsg = "비밀번호가 일치하지 않습니다.";
+	Msg::GblMsgBoxParent($errMsg, '');
+	exit;
 
-		if($status == '2'){
-			$msg = '관리자 승인 후 로그인이 가능합니다.';
-			Msg::GblMsgBoxParent($msg, '');
-			exit;
+}elseif($row['status'] == ''){
+	echo ("<script>parent.document.LOG.passwd.value='';</script>");
+	$errMsg = "휴면 상태인 계정입니다.";
+	Msg::GblMsgBoxParent($errMsg, '');
+	exit;
 
-		}elseif($status=='3'){
-			$msg = '탈퇴처리된 회원입니다.';
-			Msg::GblMsgBoxParent($msg, '');
-			exit;
-			
-		}else{
-
-			if($token){
-				$sql = "update tb_member set token='$token' where userid='$userid'";
-				$result = mysqli_query($dbc,$sql);
-			}
-
-
-			$_SESSION['ses_member_id'] = strtolower($userid);
-			$_SESSION['ses_member_name']	= $info['name'];
-			$_SESSION['ses_member_type']	= $info['mtype'];
-			$_SESSION['ses_member_pwd']	= $info['pwd'];
-			$_SESSION['ses_member_company']	= $info['company'];
-			Msg::goKorea($next_url);
-			exit;
-		}
-
+}elseif($row['status'] == '2'){
+	echo ("<script>parent.document.LOG.passwd.value='';</script>");
+	$errMsg = "고객님은 스타일링 서비스 이용에 제한이 있으니 양해 부탁드립니다.";
+	Msg::GblMsgBoxParent($errMsg, '');
+	exit;
 
 }else{
-	$msg = '입력정보가 일치하지 않습니다.\\n입력정보를 확인해 주십시오';
-	Msg::GblMsgBoxParent($msg, '');
-	exit();
+	session_destroy();
+	session_start();
+
+	$_SESSION['ses_member_id']				= $row['userid'];
+	$_SESSION['ses_member_name']	 		= $row['name'];		
+	$_SESSION['ses_member_type']			= $row['mtype'];
+
+	$userip = $_SERVER['REMOTE_ADDR'];
+	$rDate = date('Y-m-d H:i:s');
+	$rTime = time();
+
+	//마지막 로그인정보
+	sqlExe("update ks_member set loginDate='".$rDate."', loginTime='".$rTime."' where userid='".$row['userid']."'");
+
+	//로그인 정보기록
+	sqlExe("insert into ks_login_log (mtype,userid,userip,rDate,rTime) values ('".$row['mtype']."','".$userid."','".$userip."','".$rDate."','".$rTime."')");
+
+	if($row['mtype'] == 'A')			$next_url = '/adm/';
+	elseif($row['mtype'] == 'S')	$next_url = '/adm/';
+	elseif(!$next_url)					$next_url = '/';
+
+	Msg::goKorea($next_url);
+	exit;
 }
 ?>

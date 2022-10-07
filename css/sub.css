@@ -741,8 +741,11 @@
 .subWrap02 .priceImgWrap {
 	margin-right: 25px;
 	width: 40%;
-	height: 250px;
-	border-radius: 15px;
+	overflow: hidden;
+}
+
+.subWrap02 .priceImgWrap img {
+	width: 100%;
 }
 
 .subWrap02 .kindShowtit .prepay {
@@ -866,7 +869,24 @@
 	width: 24%;
 }
 
+.subWrap02 .joinKindWrap .joinKindBtn {
+	margin: 40px auto;
+	padding: 40px;
+	border-radius: 24px;
+	width: 450px;
+    box-shadow: 0px 5px 12px #d9e2e9;
+    background-color: #fff;
+    overflow: hidden;
+	box-sizing: border-box;
+	transition: all 0.3s;
+	font-size: 1.250rem;
+	font-weight: 500;
+}
 
+.subWrap02 .joinKindWrap .joinKindBtn:hover {
+	background-color: #1A6ECA;
+	color: #fff;
+}
 
 
 

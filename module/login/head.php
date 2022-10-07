@@ -27,9 +27,9 @@ $boardRoot = '../board/';
 			
 
 			<link rel="stylesheet" type="text/css" href="/css/reset.css?v=1">
-			<link rel="stylesheet" type="text/css" href="/css/style.css?v=7">
-			<link rel="stylesheet" type="text/css" href="/css/sub.css?v=3">
-			<link rel="stylesheet" type="text/css" href="/css/mediaquery.css?v=12">
+			<link rel="stylesheet" type="text/css" href="/css/style.css?v=8">
+			<link rel="stylesheet" type="text/css" href="/css/sub.css?v=4">
+			<link rel="stylesheet" type="text/css" href="/css/mediaquery.css?v=13">
 
 			<!-- Noto Sans KR -->
 			<link rel="preconnect" href="https://fonts.googleapis.com">

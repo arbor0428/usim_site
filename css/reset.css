@@ -256,7 +256,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /*table 공통*/
 .subtable {width: 100%; border-top:1px solid #d1d1d1; }
 .subtable tr {height: 40px; border-bottom: 1px solid #d1d1d1;}
-.subtable tr th {padding: 0 30px; border-right:1px solid #d1d1d1; background-color: #F0F1F3; font-weight: 700; text-align: left; font-size: 1.125rem;}
-.subtable tr td {padding: 0 30px; position: relative; border-right:1px solid #d1d1d1; font-size: 1.125rem;}
+.subtable tr th {border-right:1px solid #d1d1d1; background-color: #F0F1F3; font-weight: 700; font-size: 1.125rem;}
+.subtable tr td {position: relative; border-right:1px solid #d1d1d1; font-size: 1.125rem;}
 .subtable tr th:last-child, .subtable tr td:last-child {border-right: none;}
 

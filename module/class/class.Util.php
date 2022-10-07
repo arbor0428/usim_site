@@ -211,20 +211,25 @@ class Util
 
 
 
-	function Shorten_String($String, $MaxLen, $ShortenStr){
-		$StringLen = strlen($String);
-		$EffectLen = $MaxLen - strlen($ShortenStr);
-		
-		if ( $StringLen < $MaxLen )return $String; 
-		
-		for ($i = 0; $i <= $EffectLen; $i++) { 
-			$LastStr = substr($String, $i, 1); 
-			if ( ord($LastStr) > 127 ) $i++; 
-		} 
+	//태그제거후 문자열을 자른다음 태그적용
+	function Shorten_String($str, $len, $tail='..'){
+		$str = Util::TextAreaDecodeing($str);
 
-		$RetStr = substr($String, 0, $i); 
+		//태그제거
+		$noTag = strip_tags($str);
 
-		return $RetStr .= $ShortenStr; 
+		$strlen = mb_strlen($noTag, 'UTF-8');
+
+		$len = ceil($len/2);
+
+		if($strlen > $len){
+			$strTxt = iconv_substr($noTag, 0, $len, 'UTF-8').$tail;
+			$cutTxt = str_replace($noTag, $strTxt, $str);
+		}else{
+			$cutTxt = $str;
+		}
+
+		return $cutTxt;
 	}
 
 
@@ -311,11 +316,9 @@ class Util
 
 
 	function NameCutStr($str, $skip, $suffix){ 
-		preg_match_all( "/[\x80-\xff].|./", $str, $matches );
+		$txt = preg_replace("/(?<=.{".$skip."})./u",$suffix,$str);
 
-		for( ;$skip --; ) $h .= array_shift( $matches[0] ); 
-		$b = str_repeat($suffix,  count( $matches[0] ) ); 
-		return $h . $b; 
+		return $txt;
 	}
 
 
@@ -443,12 +446,12 @@ class Util
 	//textarea 인코딩
 	function TextAreaEncodeing($str){
 		if($str){
-			$str = str_replace('<', '&lt;', $str);
-			$str = str_replace('>', '&gt;', $str);
-			$str = str_replace('\'', '&quot;', $str);
-			$str = str_replace('\|', '&#124;', $str);
-			$str = str_replace('\r\n\r\n', '<P>', $str);
-			$str = str_replace('\r\n', '<BR>', $str);
+			$str = str_replace("<", "&lt;", $str);
+			$str = str_replace(">", "&gt;", $str);
+			$str = str_replace("\"", "&quot;", $str);
+			$str = str_replace("\|", "&#124;", $str);
+			$str = str_replace("\r\n\r\n", "<P>", $str);
+			$str = str_replace("\\r\\n", "<BR>", $str);
 		}
 
 		return $str;
@@ -458,12 +461,12 @@ class Util
 	//textarea 디코딩
 	function TextAreaDecodeing($str){
 		if($str){
-			$str = str_replace('&lt;', '<', $str);
-			$str = str_replace('&gt;', '>', $str);
-			$str = str_replace('&quot;', '\'', $str);
-			$str = str_replace('&#124;', '\|', $str);
-			$str = str_replace('<P>', '\r\n\r\n', $str);
-			$str = str_replace('<BR>', '\r\n', $str);
+			$str = str_replace("&lt;", "<", $str);
+			$str = str_replace("&gt;", ">", $str);
+			$str = str_replace("&quot;", "\"", $str);
+			$str = str_replace("&#124;", "\|", $str);
+			$str = str_replace("<P>", "\r\n\r\n", $str);
+			$str = str_replace("<BR>", "\r\n", $str);
 		}
 
 		return $str;
@@ -525,6 +528,7 @@ class Util
 
 		return $code;
 	}
+
 
 
 }

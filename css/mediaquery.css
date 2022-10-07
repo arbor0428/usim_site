@@ -351,6 +351,9 @@
     .subWrap02 {
         padding: 117px 0;
     }
+    .subWrap03 {
+        padding: 117px 0;
+    }
     .subWrap02 h3 {
         padding: 40px 0 20px 0;
     }
@@ -482,6 +485,15 @@
     .m-btn .bar_top, .m-btn .bar_mid, .m-btn .bar_bot {
         height: 3px;
     }
+	.subWrap03 .cetifiTit {
+		font-size: 1.3rem;
+	}
+	.subWrap03 .cetifiFin {
+		height: 400px;
+	}
+	.subWrap03 .cetifiCont {
+		font-size: 1rem;
+	}
     .sub_tit {
         margin-bottom: 20px;
         font-size: 1.75rem;
@@ -813,6 +825,15 @@
 	}
 
     /*요금제 가입하기*/
+	.subWrap02 .joinKindWrap {
+		margin-top: 80px;
+	}
+	.subWrap02 .joinKindWrap .joinKindBtn {
+		width: 90%;
+		padding: 30px;
+		border-radius: 8px;
+		font-size: 1rem;
+	}
     .subWrap02 .joinStepShow {
         display: none;
     }

@@ -7,7 +7,7 @@ class DbCon
 	var $DB				= "hanpass";
 
 	function getConnection(){
-		$dbconn = mysqli_connect($this->DB_SERVER, $this->DB_LOGIN, $this->DB_PASSWORD, $this->DB) or die("ë°ì´íƒ€ë² ì´ìŠ¤ ì—°ê²°ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
+		$dbconn = mysqli_connect($this->DB_SERVER, $this->DB_LOGIN, $this->DB_PASSWORD, $this->DB) or die("µ¥ÀÌÅ¸º£ÀÌ½º ¿¬°á¿¡ ½ÇÆÐÇß½À´Ï´Ù.");
 		$status = mysqli_select_db($dbconn,$this->DB);
 
 		if($status)
@@ -45,7 +45,7 @@ function sql_injection($varData){
 $_POST = sql_injection($_POST);
 $_GET = sql_injection($_GET);
 
-//í•´ë‹¹ í•­ìˆ˜ê°€ ì—†ìœ¼ë©´ ì„ ì–¸
+//ÇØ´ç Ç×¼ö°¡ ¾øÀ¸¸é ¼±¾ð
 if(!function_exists('mysqli_result')){
 	function mysqli_result($res,$row=0,$col=0){ 
 		$nums=mysqli_num_rows($res);
@@ -63,4 +63,7 @@ if(!function_exists('mysqli_result')){
 	@extract($_POST); 
 	@extract($_SERVER);
 }
+
+//Äõ¸®ÇÔ¼ö
+include '/home/style7/www/module/query_func.php';
 ?>

@@ -44,7 +44,7 @@
 			</div>
 			<div class="v_twoBtn dp_sb">
 				<a class="gry03 c_w dp_f dp_c dp_cc" href="/sub01/sub01.php" title="">유심칩이 없어요</a>
-				<a class="gradient c_w dp_f dp_c dp_cc" href="/sub02/sub01.php" title="">유심침을 가지고 있어요</a>
+				<a class="gradient c_w dp_f dp_c dp_cc" href="/sub02/sub01.php" title="../member/joinPrice_step1.php">유심침을 가지고 있어요</a>
 			</div>
 		</div>
 	</section>
