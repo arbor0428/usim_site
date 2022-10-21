@@ -8,7 +8,7 @@
 			<span>월 사용 요금</span>
 			<span class="c_red01 bold2 priceDet">29,000원</span>
 		</div>
-		<a class="joinBtn dp_f dp_c dp_cc c_w blue01" href="../member/joinPrice_step0.php" title="가입하기">가입하기</a>
+		<a class="joinBtn dp_f dp_c dp_cc c_w blue01" href="../sub01/joinPrice_step0.php" title="가입하기">가입하기</a>
 		<!----유심보유에서 유심 있음 선택했을  href 주소로 넘어가게 됨---->
 	</div>
 </div>

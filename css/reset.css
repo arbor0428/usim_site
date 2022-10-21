@@ -133,6 +133,7 @@ textarea {padding: 10px; box-sizing: border-box; width: 100%; height: 100%; resi
 .wid49 {width: 49%;}
 .wid23 {width: 23%;}
 .wid18 {width: 18%;}
+.wid31 {width: 31% !important;}
 
 .hght100 {height: 100%;}
 
@@ -258,5 +259,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .subtable tr {height: 40px; border-bottom: 1px solid #d1d1d1;}
 .subtable tr th {border-right:1px solid #d1d1d1; background-color: #F0F1F3; font-weight: 700; font-size: 1.125rem;}
 .subtable tr td {position: relative; border-right:1px solid #d1d1d1; font-size: 1.125rem;}
+.subtable02 tr td {padding: 0 20px;}
 .subtable tr th:last-child, .subtable tr td:last-child {border-right: none;}
 

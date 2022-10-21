@@ -491,6 +491,33 @@
 	padding: 50px 0;
 }
 
+.subWrap02 .joinExplain {
+	padding: 50px 30px;
+	box-sizing: border-box;
+}
+
+.subWrap02 .joinExplain li {
+	margin-bottom: 20px;
+	position: relative; 
+	padding-left: 20px;
+}
+
+.subWrap02 .joinExplain li:last-child {
+	margin-bottom: 0;
+}
+
+.subWrap02 .joinExplain li:before {
+	content: "";
+	position: absolute; 
+	left:0;
+	top: 10px;
+	display: block;
+	width: 8px; 
+	height: 8px;
+	margin-right: 10px;
+	background-color: #1a6eca;
+}
+
 .subWrap02 .pwChnFin {
 	font-size: 1.5em;
 }
@@ -576,7 +603,6 @@
 }
 
 .inputWrap .status {
-	margin-top: 20px;
 	font-size: 0.875rem;
 }
 
@@ -869,6 +895,18 @@
 	width: 24%;
 }
 
+.subWrap02 .phoneInputWrap {
+	width: 100%;
+}
+
+.subWrap02 .phoneInputWrap .phoneInput {
+	width: 75%;
+}
+
+.subWrap02 .phoneInputWrap .phoneInput input {
+	width: 31.333%;
+}
+
 .subWrap02 .joinKindWrap .joinKindBtn {
 	margin: 40px auto;
 	padding: 40px;
@@ -889,6 +927,8 @@
 }
 
 
-
+.subWrap02 .payKindContWrap .payKindCont {
+	display:none;
+}
 
 

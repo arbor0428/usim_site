@@ -32,7 +32,7 @@
 </div>
 
 <div class="container">
-	<section class="sec01">
+	<section id="sec1" class="sec01">
 		<div class="c_center">
 			<div class="slickslider">
 				<div class="slickBox">
@@ -47,17 +47,17 @@
 				<a class="gradient c_w dp_f dp_c dp_cc" href="/sub02/sub01.php" title="../member/joinPrice_step1.php">유심침을 가지고 있어요</a>
 			</div>
 		</div>
+		<script>
+			$('.slickslider').slick({ 
+				infinite : true, 
+				autoplay : true,			// 자동 스크롤 사용 여부
+				autoplaySpeed : 3000, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+				arrows : false,
+				dots:true,
+				fade: true,
+			});
+		</script>
 	</section>
-	<script>
-		$('.slickslider').slick({ 
-			infinite : true, 
-			autoplay : true,			// 자동 스크롤 사용 여부
-			autoplaySpeed : 3000, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
-			arrows : false,
-			dots:true,
-			fade: true,
-		});
-	</script>
 	<section class="sec02 gry01">
 		<div class="c_center">
 			<h3 class="sub_tit bold2 c_blk">
@@ -193,16 +193,16 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			$('.slickslider02').slick({ 
+				infinite : true, 
+				autoplay : false,			// 자동 스크롤 사용 여부
+				arrows : true,
+				dots: false,
+				fade: false,
+			});
+		</script>
 	</section>
-	<script>
-		$('.slickslider02').slick({ 
-			infinite : true, 
-			autoplay : false,			// 자동 스크롤 사용 여부
-			arrows : true,
-			dots: false,
-			fade: false,
-		});
-	</script>
 	<section class="sec03">
 		<div class="c_center">
 			<div class="whtBox">
@@ -250,98 +250,98 @@
 				<a class="moreBtn" href="" title="조회하기">조회하기</a>
 			</div>
 		</div>
-	</section>
-	<script src="https://www.jqueryscript.net/demo/Highly-Customizable-Range-Slider-Plugin-For-Bootstrap-Bootstrap-Slider/dist/bootstrap-slider.js"></script>
-	<link href="https://www.jqueryscript.net/demo/Highly-Customizable-Range-Slider-Plugin-For-Bootstrap-Bootstrap-Slider/dist/css/bootstrap-slider.css" rel="stylesheet" type="text/css">
+		<script src="https://www.jqueryscript.net/demo/Highly-Customizable-Range-Slider-Plugin-For-Bootstrap-Bootstrap-Slider/dist/bootstrap-slider.js"></script>
+		<link href="https://www.jqueryscript.net/demo/Highly-Customizable-Range-Slider-Plugin-For-Bootstrap-Bootstrap-Slider/dist/css/bootstrap-slider.css" rel="stylesheet" type="text/css">
 
-	<style>
-		.slider .tooltip.top {display: none;}
-		.slider-track {
-			background-image: none;
-			background-color: #ddd;
-			border-radius: 0;
-		}
-		.slider-handle {
-			background-image: none;
-			box-shadow: 0;
-			border: 1px solid #959CA9;
-			background-color: #fff;
-			width: 35px;
-			height: 35px;
-		}
-		.slider-selection {
-			background: #1A6ECA;
-			border-radius: 0;
-		}
-		.slider-selection.tick-slider-selection {
-			background-image: none;
-			background-color: #1A6ECA;
-		}
-		.slider.slider-horizontal {margin: 0 auto; width: 90%; display: block !important;}
-		.slider.slider-horizontal .slider-tick {
-			margin-top: 0;
-			height: 10px;
-			width:2px;
-			margin-left: 0 !important;
-			background-color: #fff;
-			background-image: none;
-			box-shadow: none;
-		}
-		.slider.slider-horizontal .slider-handle {
-			margin-top: -16px;
-		}
-		.slider.slider-horizontal .slider-tick, .slider.slider-horizontal .slider-handle {
-			margin-left: -12px;
-		}
-		.slider.slider-horizontal .slider-tick.round {
-			border-radius: 0;
-		}
-		.slider-track-low, .slider-track-high {
-			border-radius: 0;
-		}
-		@media (max-width:540px) { 
-			.slider.slider-horizontal .slider-track {
-				height: 5px;
+		<style>
+			.slider .tooltip.top {display: none;}
+			.slider-track {
+				background-image: none;
+				background-color: #ddd;
+				border-radius: 0;
 			}
 			.slider-handle {
-				width: 20px;
-				height: 20px;
+				background-image: none;
+				box-shadow: 0;
+				border: 1px solid #959CA9;
+				background-color: #fff;
+				width: 35px;
+				height: 35px;
+			}
+			.slider-selection {
+				background: #1A6ECA;
+				border-radius: 0;
+			}
+			.slider-selection.tick-slider-selection {
+				background-image: none;
+				background-color: #1A6ECA;
+			}
+			.slider.slider-horizontal {margin: 0 auto; width: 90%; display: block !important;}
+			.slider.slider-horizontal .slider-tick {
+				margin-top: 0;
+				height: 10px;
+				width:2px;
+				margin-left: 0 !important;
+				background-color: #fff;
+				background-image: none;
+				box-shadow: none;
 			}
 			.slider.slider-horizontal .slider-handle {
-				margin-top: -8px;
+				margin-top: -16px;
 			}
-		}
-	</style>
-	<script>
-		$("#ser01").slider({
-			value: [0, 400],
-			ticks: [0, 100, 200, 300, 400],
-			lock_to_ticks: true
-		});
-		$("#ser02").slider({
-			ticks: [0, 100, 200, 300, 400],
-			lock_to_ticks: true
-		});
-		$("#ser03").slider({
-			ticks: [0, 100, 200, 300, 400],
-			lock_to_ticks: true
-		});
-		
-		function m_box1(obj,chk){
-			eChk = document.getElementsByName(obj);
-
-			for(var i=0;i<eChk.length;i++){
-				var h=i+1
-				if(i == chk){
-					eChk[i].checked = true;
-					$('#m_box1_'+h).parent().addClass('active');
-				}else{
-					eChk[i].checked = false;
-					$('#m_box1_'+h).parent().removeClass('active');
+			.slider.slider-horizontal .slider-tick, .slider.slider-horizontal .slider-handle {
+				margin-left: -12px;
+			}
+			.slider.slider-horizontal .slider-tick.round {
+				border-radius: 0;
+			}
+			.slider-track-low, .slider-track-high {
+				border-radius: 0;
+			}
+			@media (max-width:540px) { 
+				.slider.slider-horizontal .slider-track {
+					height: 5px;
+				}
+				.slider-handle {
+					width: 20px;
+					height: 20px;
+				}
+				.slider.slider-horizontal .slider-handle {
+					margin-top: -8px;
 				}
 			}
-		}
-	</script>
+		</style>
+		<script>
+			$("#ser01").slider({
+				value: [0, 400],
+				ticks: [0, 100, 200, 300, 400],
+				lock_to_ticks: true
+			});
+			$("#ser02").slider({
+				ticks: [0, 100, 200, 300, 400],
+				lock_to_ticks: true
+			});
+			$("#ser03").slider({
+				ticks: [0, 100, 200, 300, 400],
+				lock_to_ticks: true
+			});
+			
+			function m_box1(obj,chk){
+				eChk = document.getElementsByName(obj);
+
+				for(var i=0;i<eChk.length;i++){
+					var h=i+1
+					if(i == chk){
+						eChk[i].checked = true;
+						$('#m_box1_'+h).parent().addClass('active');
+					}else{
+						eChk[i].checked = false;
+						$('#m_box1_'+h).parent().removeClass('active');
+					}
+				}
+			}
+		</script>
+	</section>
 	<section class="sec04 blue02">
 		<div class="c_center">
 			<h3 class="sub_tit bold2 c_blk">
@@ -477,7 +477,7 @@
 			<a class="moreBtn" href="" title="더보기">더보기</a> -->
 		</div>
 	</section>
-	<section class="sec05">
+	<section id="sec2" class="sec05">
 		<div class="c_center">
 			<div class="whtBox">
 				<h3 class="sub_tit02 regular">
@@ -498,18 +498,18 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			$('.cardSlide').slick({ 
+				infinite : true, 
+				autoplay : true,			// 자동 스크롤 사용 여부
+				autoplaySpeed : 3000, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+				arrows : false,
+				dots:true,
+				fade: true,
+			});
+		</script>
 	</section>
-	<script>
-		$('.cardSlide').slick({ 
-			infinite : true, 
-			autoplay : true,			// 자동 스크롤 사용 여부
-			autoplaySpeed : 3000, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
-			arrows : false,
-			dots:true,
-			fade: true,
-		});
-	</script>
-	<section class="sec06 gry01">
+	<section  id="sec3" class="sec06 gry01">
 		<div class="c_center">
 			<div class="whtBox">
 				<h3 class="sub_tit bold2 c_blk">
@@ -551,7 +551,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="sec07">
+	<section id="sec4" class="sec07">
 		<div class="c_center">
 			<h3 class="sub_tit bold2 c_blk">
 				이벤트
@@ -612,11 +612,22 @@
 		</div>
 	</section>
 </div>
+<!-- 
+	<script>
+		//스크롤 이동
+		function fnMove(seq){
+			var offset = $("#cont" + seq).offset();
+			$('html, body').animate({scrollTop : offset.top}, 400);
+		}
+	</script> -->
+
+
 <script>
     // Add a .touch or .no-touch class to <html> based on device capability
     document.documentElement.setAttribute('class',
         'ontouchend' in document ? 'touch' : 'no-touch');
 </script>
+
 
 
 <?

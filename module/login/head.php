@@ -26,10 +26,10 @@ $boardRoot = '../board/';
 			?>
 			
 
-			<link rel="stylesheet" type="text/css" href="/css/reset.css?v=1">
-			<link rel="stylesheet" type="text/css" href="/css/style.css?v=8">
-			<link rel="stylesheet" type="text/css" href="/css/sub.css?v=4">
-			<link rel="stylesheet" type="text/css" href="/css/mediaquery.css?v=13">
+			<link rel="stylesheet" type="text/css" href="/css/reset.css?v=3">
+			<link rel="stylesheet" type="text/css" href="/css/style.css?v=11">
+			<link rel="stylesheet" type="text/css" href="/css/sub.css?v=6">
+			<link rel="stylesheet" type="text/css" href="/css/mediaquery.css?v=14">
 
 			<!-- Noto Sans KR -->
 			<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,24 +39,16 @@ $boardRoot = '../board/';
 			<!-- Custom styles for this page -->
 			<link href="/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 			<!-- Bootstrap core JavaScript-->
-			<script src="/vendor/jquery/jquery.min.js"></script>
+			<script src="/module/js/jquery.min.js"></script>
 			<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 			<link rel="stylesheet" type="text/css" href="/module/popupoverlay/popupoverlay.css">
 			
-			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-			<script src="https://code.jquery.com/jquery-1.11.3.js"></script>	
 			<script src="/module/js/common.js"></script>
-			<script src="/module/popupoverlay/jquery.popupoverlay.js"></script>
 			<script src="/module/js/jquery.easing.min.js"></script>
+			<script src="/module/popupoverlay/jquery.popupoverlay.js"></script>
 			<script src="/module/js/script.js"></script>
 			
-			<!-- <link type="text/css" href="http://jqueryui.com/latest/themes/base/ui.all.css" rel="stylesheet" />
-			<script type="text/javascript" src="http://jqueryui.com/latest/ui/ui.core.js"></script>
-			<script type="text/javascript" src="http://jqueryui.com/latest/ui/ui.slider.js"></script>
-			<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
-			<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> -->
-
 			<!-- aos -->
 			<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 			<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -78,6 +70,7 @@ $boardRoot = '../board/';
 
 			<!-- gsap 불러오기 -->
 		    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+			<link type='text/css' rel='stylesheet' href='/module/popupoverlay/popupoverlay.css'><!-- 웹킷브라우져용 -->
 
 			<title>한패스모바일</title>
 

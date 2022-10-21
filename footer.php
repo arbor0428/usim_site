@@ -76,6 +76,14 @@
     </footer>
 </div>
 
+
+<?
+//팝업 모달창
+include '/home/hanpass/www/module/popupoverlay.php';
+?>
+
+
+
 <script>
 	//메뉴
 	var flag = true;

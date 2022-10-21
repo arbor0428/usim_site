@@ -319,6 +319,10 @@ section {
     cursor: pointer;
 }
 
+.submitBtn.m-100 {
+	margin: 120px auto 15px;
+}
+
 .submitBtn.disable {
     background:#b7b7b7 !important;
     color: #fff;
