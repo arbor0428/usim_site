@@ -7,11 +7,16 @@
       <div class="c_center">
          <p class="joinSubTit">구매자 정보를 입력해 주세요.</p>
          <div class="kindBtnWrap">
-            <ul class="kindBox">
-               <li class="dp_sb dp_c">
+            <ul class="kindBox dp_sb dp_c">
+               <li>
                   <span>유심선택</span>
+				</li>
+				<li>
                   <label class="dp_sb dp_c dp_cc active" for="c_box1_1"><input type="radio" name="c_box1" id="c_box1_1" onclick="c_box1(this.name,0);">일반 유심<br>4,400원</label>
-                  <label class="dp_sb dp_c dp_cc" for="c_box1_2"><input type="radio" name="c_box1" id="c_box1_2" onclick="c_box1(this.name,1);">NFC 유심<br>7,700원</label>
+				 </li>
+				 <li>
+					<label class="dp_sb dp_c dp_cc" for="c_box1_2"><input type="radio" name="c_box1" id="c_box1_2" onclick="c_box1(this.name,1);">NFC 유심<br>8,800원</label>
+				  </li>
                </li>
             </ul>
          </div>
@@ -141,13 +146,21 @@
       <div class="c_center">
          <p class="minibx">결제 방식</p>
          <div class="kindBtnWrap">
-				<ul class="kindBox wid25">
-					<li class="dp_sb dp_c">
+				<ul class="kindBox wid24 dp_sb dp_c">
+					<li>
 						<label class="dp_sb dp_c dp_cc txt-c" for="c_box3_1"><input type="radio" name="c_box3" id="c_box3_1" onclick="c_box3(this.name,0);">신용카드 자동납부</label>
+					</li>
+					<li>
 						<label class="dp_sb dp_c dp_cc txt-c" for="c_box3_2"><input type="radio" name="c_box3" id="c_box3_2" onclick="c_box3(this.name,1);">은행계좌 자동이체</label>
+					</li>
+					<li>
 						<label class="dp_sb dp_c dp_cc txt-c" for="c_box3_3"><input type="radio" name="c_box3" id="c_box3_3" onclick="c_box3(this.name,2);">가상계좌 입금</label>
+					</li>
+					<!--한패스 - 한국국적일 경우 간편결제 미노출 내용 확인 필요-->
+					<li>
 						<label class="dp_sb dp_c dp_cc txt-c" for="c_box3_4"><input type="radio" name="c_box3" id="c_box3_4" onclick="c_box3(this.name,3);">한패스 <br class="m_br">결제</label>
 					</li>
+					<!--한패스 - 한국국적일 경우 간편결제 미노출 내용 확인 필요-->
 				</ul>
 				<ul class="dotlist m_45">
 					<li>본인 명의의 카드 또는 계좌 정보를 입력해주세요.<br>타인 명의의 납수수단 정보를 입력하는 경우, 개통 전 명의자 동의 및 신분증 제출 등 추가 확인 절차가 진행됩니다.</li>

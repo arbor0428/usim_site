@@ -408,6 +408,19 @@
         font-size: 1rem;
     }
 
+	.kindBtnWrap .kindBox > li .alddeulSelWrap {
+		bottom: -200px;
+		width: 200px;
+		height: 200px;
+		right: 0;
+		transform: translateX(0);
+	}
+
+	.submitBtn02 {
+		padding: 16px 0;
+		font-size: 1.125rem;
+	}
+
     /*로그인*/
     .l_center {
         width: 90%;
@@ -849,12 +862,11 @@
         padding: 10px;
         border-radius: 5px;
     }
-    .subWrap02 .kindBtnWrap .kindBox li span {
+    .subWrap02 .kindBtnWrap .kindBox > li span {
         width: 26%;
     }
-    .subWrap02 .kindBtnWrap .kindBox li label {
+    .subWrap02 .kindBtnWrap .kindBox > li label {
         margin-bottom: 0;
-        width: 32%;
     }
     .subWrap02 .kindBtnWrap.mb_20 .kindBox li label {
         margin-bottom: 10px;

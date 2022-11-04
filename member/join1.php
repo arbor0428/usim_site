@@ -39,6 +39,12 @@ function niceCheck(t){
 
 </script>
 
+<!-- 휴대폰 인증용 -->
+<form name="form_chk" method="post">
+<input type="hidden" name="m" value="checkplusService">
+<input type="hidden" name="EncodeData" value="">
+</form>
+
 
 <form name='FRM' id='FRM' method='post' action='<?=$PHP_SELF?>'>
 	<input type='hidden' name='type' id='type' value=''>

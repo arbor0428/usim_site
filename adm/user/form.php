@@ -158,10 +158,10 @@ function userDel(){
 	<div class="cols">
 		<div class="cols_20 cols_ th"><span class='eqc'>*</span>아이디</div>
 		<div class="cols_80 cols_">
-			<div class="form-group"><?=$userid?></div>
+			<div class="form-group"><?=$email?></div>
 		</div>
 	</div>
-
+<!--
 	<div class="cols">
 		<div class="cols_20 cols_ th"><span class='eqc'>*</span>성 별</div>
 		<div class="cols_80 cols_">
@@ -173,7 +173,7 @@ function userDel(){
 			</div>
 		</div>
 	</div>
-
+-->
 	<div class="cols">
 		<div class="cols_20 cols_ th"><span class='eqc'>*</span>이 름</div>
 		<div class="cols_80 cols_">
@@ -220,7 +220,7 @@ function userDel(){
 			</div>
 		</div>
 	</div>
-
+<!--
 	<div class="cols">
 		<div class="cols_20 cols_ th"><span class='eqc'>*</span>생년월일</div>
 		<div class="cols_80 cols_">
@@ -238,6 +238,7 @@ function userDel(){
 			</div>
 		</div>
 	</div>
+-->
 
 	<div class="cols">
 		<div class="cols_20 cols_ th">광고수신동의</div>

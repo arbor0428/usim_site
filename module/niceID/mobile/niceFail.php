@@ -9,11 +9,11 @@
     //보안을 위해 제공해드리는 샘플페이지는 서비스 적용 후 서버에서 삭제해 주시기 바랍니다. 
     //**************************************************************************************************************
 
-    $sitecode = "BX049";				// NICE로부터 부여받은 사이트 코드
-    $sitepasswd = "uAyPY3D8mBhZ";				// NICE로부터 부여받은 사이트 패스워드
+    $sitecode = "FU05";				// NICE로부터 부여받은 사이트 코드
+    $sitepasswd = "44327276";				// NICE로부터 부여받은 사이트 패스워드
     
     // Linux = /절대경로/ , Window = D:\\절대경로\\ , D:\절대경로\
-    $cb_encode_path = "/home/ansanfys/www/module/niceID/mobile/CPClient_64bit";
+	$cb_encode_path = "/home/hanpass/www/module/niceID/mobile/CPClient_64bit";
 		
     $enc_data = $_REQUEST["EncodeData"];		// 암호화된 결과 데이타
 

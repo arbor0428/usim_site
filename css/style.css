@@ -319,6 +319,17 @@ section {
     cursor: pointer;
 }
 
+.submitBtn02 {
+	margin: 40px 0;
+    border-radius: 45px;
+    padding: 24px 0;
+    display: block;
+    width: 48%;
+    font-size: 1.75rem;   
+    text-align: center;
+    cursor: pointer;
+}
+
 .submitBtn.m-100 {
 	margin: 120px auto 15px;
 }
@@ -429,7 +440,7 @@ section {
 
 .whtBox .condition .condi_scroll {
     overflow-y: scroll;
-    height: 169px;
+    height: 85px;
 }
 
 .whtBox .condition .condi_scroll p {

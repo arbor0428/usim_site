@@ -130,11 +130,17 @@
 		<div class="c_center">
 			<p class="minibx">결제 방식</p>
 			<div class="kindBtnWrap">
-				<ul class="kindBox wid25">
-					<li class="dp_sb dp_c">
+				<ul class="kindBox wid24 dp_sb dp_c">
+					<li>
 						<label class="dp_sb dp_c dp_cc txt-c" for="c_box3_1"><input type="radio" name="c_box3" id="c_box3_1" onclick="c_box3(this.name,0);">신용카드 자동납부</label>
+					</li>
+					<li>
 						<label class="dp_sb dp_c dp_cc txt-c" for="c_box3_2"><input type="radio" name="c_box3" id="c_box3_2" onclick="c_box3(this.name,1);">은행계좌 자동이체</label>
+					</li>
+					<li>
 						<label class="dp_sb dp_c dp_cc txt-c" for="c_box3_3"><input type="radio" name="c_box3" id="c_box3_3" onclick="c_box3(this.name,2);">가상계좌 입금</label>
+					</li>
+					<li>
 						<label class="dp_sb dp_c dp_cc txt-c" for="c_box3_4"><input type="radio" name="c_box3" id="c_box3_4" onclick="c_box3(this.name,3);">한패스 <br class="m_br">결제</label>
 					</li>
 				</ul>

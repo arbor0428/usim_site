@@ -42,10 +42,14 @@
 		<div class="wht01 p_20 p-50">
 			<div class="c_center">
 				<div class="kindBtnWrap">
-					<ul class="kindBox">
-						<li class="dp_sb dp_c">
+					<ul class="kindBox dp_sb dp_c">
+						<li>
 							<span>가입자확인</span>
+						</li>
+						<li>
 							<label class="dp_sb dp_c dp_cc active" for="c_box1_1"><input type="radio" name="c_box1" id="c_box1_1" onclick="c_box1(this.name,0);">내국인</label>
+						</li>
+						<li>
 							<label class="dp_sb dp_c dp_cc" for="c_box1_2"><input type="radio" name="c_box1" id="c_box1_2" onclick="c_box1(this.name,1);">외국인</label>
 						</li>
 					</ul>
@@ -71,10 +75,14 @@
 				<div class="wht01 m-28 p_20 p-20">
 					<div class="c_center">
 						<div class="kindBtnWrap">
-							<ul class="kindBox mb40">
-								<li class="dp_sb dp_c">
+							<ul class="kindBox mb40 dp_sb dp_c">
+								<li>
 									<span>신분증</span>
+								</li>
+								<li>
 									<label class="dp_sb dp_c dp_cc active" for="c_box2_1"><input type="radio" name="c_box2" id="c_box2_1" onclick="c_box2(this.name,0);">주민등록증</label>
+								</li>
+								<li>
 									<label class="dp_sb dp_c dp_cc" for="c_box2_2"><input type="radio" name="c_box2" id="c_box2_2" onclick="c_box2(this.name,1);">운전면허증</label>
 								</li>
 							</ul>
@@ -85,7 +93,61 @@
 							<div class="kindCont">
 								<div class="inputWrap">
 									<label class="minibx" for="issueNum">발급일자</label>
-									<input id="issueNum" type="date">
+									<div class="dateWrap dp_sb">
+										<select>
+											<option>YYYY</option>
+											<option>2000</option>
+										</select>
+										<select>
+											<option>MM</option>
+											<option>01</option>
+											<option>02</option>
+											<option>03</option>
+											<option>04</option>
+											<option>05</option>
+											<option>06</option>
+											<option>07</option>
+											<option>08</option>
+											<option>09</option>
+											<option>10</option>
+											<option>11</option>
+											<option>12</option>
+										</select>
+										<select>
+											<option>DD</option>
+											<option>01</option>
+											<option>02</option>
+											<option>03</option>
+											<option>04</option>
+											<option>05</option>
+											<option>06</option>
+											<option>07</option>
+											<option>08</option>
+											<option>09</option>
+											<option>10</option>
+											<option>11</option>
+											<option>12</option>
+											<option>13</option>
+											<option>14</option>
+											<option>15</option>
+											<option>16</option>
+											<option>17</option>
+											<option>18</option>
+											<option>19</option>
+											<option>20</option>
+											<option>21</option>
+											<option>22</option>
+											<option>23</option>
+											<option>24</option>
+											<option>25</option>
+											<option>26</option>
+											<option>27</option>
+											<option>28</option>
+											<option>29</option>
+											<option>30</option>
+											<option>31</option>
+										</select>
+									</div>
 									<span class="status c_grn01">* 실명 인증 처리 완료되었습니다.</span>
 									<span class="status c_red" style="display: none;">* 실명 인증 처리 실패했습니다.</span>
 								</div>
@@ -120,7 +182,61 @@
 								</div>
 								<div class="inputWrap">
 									<label class="minibx" for="issueNum">발급일자</label>
-									<input id="issueNum" type="date">
+									<div class="dateWrap dp_sb">
+										<select>
+											<option>YYYY</option>
+											<option>2000</option>
+										</select>
+										<select>
+											<option>MM</option>
+											<option>01</option>
+											<option>02</option>
+											<option>03</option>
+											<option>04</option>
+											<option>05</option>
+											<option>06</option>
+											<option>07</option>
+											<option>08</option>
+											<option>09</option>
+											<option>10</option>
+											<option>11</option>
+											<option>12</option>
+										</select>
+										<select>
+											<option>DD</option>
+											<option>01</option>
+											<option>02</option>
+											<option>03</option>
+											<option>04</option>
+											<option>05</option>
+											<option>06</option>
+											<option>07</option>
+											<option>08</option>
+											<option>09</option>
+											<option>10</option>
+											<option>11</option>
+											<option>12</option>
+											<option>13</option>
+											<option>14</option>
+											<option>15</option>
+											<option>16</option>
+											<option>17</option>
+											<option>18</option>
+											<option>19</option>
+											<option>20</option>
+											<option>21</option>
+											<option>22</option>
+											<option>23</option>
+											<option>24</option>
+											<option>25</option>
+											<option>26</option>
+											<option>27</option>
+											<option>28</option>
+											<option>29</option>
+											<option>30</option>
+											<option>31</option>
+										</select>
+									</div>
 									<span class="status c_red">* 실명 인증 처리 완료되었습니다.</span>
 									<span class="status c_red" style="display: none;">* 실명 인증 처리 실패했습니다.</span>
 								</div>
@@ -169,24 +285,82 @@
 				<div class="wht01 m-28 p_20 p-20">
 					<div class="c_center">
 						<div class="kindBtnWrap">
-							<ul class="kindBox mb40">
-								<li class="dp_sb dp_c">
+							<ul class="kindBox mb40 dp_sb dp_c">
+								<li>
 									<span>신분증</span>
+								</li>
+								<li>
 									<label class="dp_sb dp_c dp_cc active" for="c_box4_1"><input type="radio" name="c_box4" id="c_box4_1" onclick="c_box4(this.name,0);">외국인 등록증</label>
+								</li>
+								<li>
 									<label class="dp_sb dp_c dp_cc" for="c_box4_2"><input type="radio" name="c_box4" id="c_box4_2" onclick="c_box4(this.name,1);">여권</label>
 								</li>
 							</ul>
-						</div>
-						<div class="inputWrap">
-							<label class="minibx" for="issueNum">발급일자</label>
-							<input id="issueNum" type="date">
-							<span class="status c_red">* 실명 인증 처리 완료되었습니다.</span>
-							<span class="status c_red" style="display: none;">* 실명 인증 처리 실패했습니다.</span>
 						</div>
 
 						<div class="cardExamWrap">
 							<!--외국인 등록증 선택시 보여져야함-->
 							<div class="cardExam">
+								<div class="inputWrap">
+									<label class="minibx" for="issueNum">발급일자</label>
+									<div class="dateWrap">
+										<select>
+											<option>YYYY</option>
+											<option>2000</option>
+										</select>
+										<select>
+											<option>MM</option>
+											<option>01</option>
+											<option>02</option>
+											<option>03</option>
+											<option>04</option>
+											<option>05</option>
+											<option>06</option>
+											<option>07</option>
+											<option>08</option>
+											<option>09</option>
+											<option>10</option>
+											<option>11</option>
+											<option>12</option>
+										</select>
+										<select>
+											<option>DD</option>
+											<option>01</option>
+											<option>02</option>
+											<option>03</option>
+											<option>04</option>
+											<option>05</option>
+											<option>06</option>
+											<option>07</option>
+											<option>08</option>
+											<option>09</option>
+											<option>10</option>
+											<option>11</option>
+											<option>12</option>
+											<option>13</option>
+											<option>14</option>
+											<option>15</option>
+											<option>16</option>
+											<option>17</option>
+											<option>18</option>
+											<option>19</option>
+											<option>20</option>
+											<option>21</option>
+											<option>22</option>
+											<option>23</option>
+											<option>24</option>
+											<option>25</option>
+											<option>26</option>
+											<option>27</option>
+											<option>28</option>
+											<option>29</option>
+											<option>30</option>
+											<option>31</option>
+										</select>
+									</div>
+									<span class="status c_red">* 실명 인증 처리 완료되었습니다.</span>
+									<span class="status c_red" style="display: none;">* 실명 인증 처리 실패했습니다.</span>
+								</div>
 								<p class="m_15 minibx">외국인 등록증 예시</p>
 								<div class="dp_sb cardImgshow">
 									<div class="imgwrap">
@@ -211,7 +385,132 @@
 							<!--외국인 등록증 선택시 보여져야함-->
 
 							<!--여권 선택시 보여져야함-->
-							<div class="cardExam"></div>
+							<div class="cardExam">
+								<div class="inputWrap">
+									<label class="minibx" for="issueNum">발급일자</label>
+									<div class="dateWrap">
+										<select>
+											<option>YYYY</option>
+											<option>2000</option>
+										</select>
+										<select>
+											<option>MM</option>
+											<option>01</option>
+											<option>02</option>
+											<option>03</option>
+											<option>04</option>
+											<option>05</option>
+											<option>06</option>
+											<option>07</option>
+											<option>08</option>
+											<option>09</option>
+											<option>10</option>
+											<option>11</option>
+											<option>12</option>
+										</select>
+										<select>
+											<option>DD</option>
+											<option>01</option>
+											<option>02</option>
+											<option>03</option>
+											<option>04</option>
+											<option>05</option>
+											<option>06</option>
+											<option>07</option>
+											<option>08</option>
+											<option>09</option>
+											<option>10</option>
+											<option>11</option>
+											<option>12</option>
+											<option>13</option>
+											<option>14</option>
+											<option>15</option>
+											<option>16</option>
+											<option>17</option>
+											<option>18</option>
+											<option>19</option>
+											<option>20</option>
+											<option>21</option>
+											<option>22</option>
+											<option>23</option>
+											<option>24</option>
+											<option>25</option>
+											<option>26</option>
+											<option>27</option>
+											<option>28</option>
+											<option>29</option>
+											<option>30</option>
+											<option>31</option>
+										</select>
+									</div>
+									<span class="status c_red">* 실명 인증 처리 완료되었습니다.</span>
+									<span class="status c_red" style="display: none;">* 실명 인증 처리 실패했습니다.</span>
+								</div>
+								<div class="inputWrap m_20">
+									<label class="minibx" for="addr">여권번호</label>
+									<input id="addr" type="text" placeholder="주소 검색" autocomplete="off">
+								</div>
+								<div class="inputWrap">
+									<label class="minibx" for="issueNum">체류기간</label>
+									<div class="dateWrap dp_sb">
+										<select>
+											<option>YYYY</option>
+											<option>2000</option>
+										</select>
+										<select>
+											<option>MM</option>
+											<option>01</option>
+											<option>02</option>
+											<option>03</option>
+											<option>04</option>
+											<option>05</option>
+											<option>06</option>
+											<option>07</option>
+											<option>08</option>
+											<option>09</option>
+											<option>10</option>
+											<option>11</option>
+											<option>12</option>
+										</select>
+										<select>
+											<option>DD</option>
+											<option>01</option>
+											<option>02</option>
+											<option>03</option>
+											<option>04</option>
+											<option>05</option>
+											<option>06</option>
+											<option>07</option>
+											<option>08</option>
+											<option>09</option>
+											<option>10</option>
+											<option>11</option>
+											<option>12</option>
+											<option>13</option>
+											<option>14</option>
+											<option>15</option>
+											<option>16</option>
+											<option>17</option>
+											<option>18</option>
+											<option>19</option>
+											<option>20</option>
+											<option>21</option>
+											<option>22</option>
+											<option>23</option>
+											<option>24</option>
+											<option>25</option>
+											<option>26</option>
+											<option>27</option>
+											<option>28</option>
+											<option>29</option>
+											<option>30</option>
+											<option>31</option>
+										</select>
+									</div>
+									<span class="status c_red">* 실명 인증 처리 완료되었습니다.</span>
+									<span class="status c_red" style="display: none;">* 실명 인증 처리 실패했습니다.</span>
+								</div>
+							</div>
 							<!--여권 선택시 보여져야함-->
 						</div>
 					</div>
@@ -238,7 +537,7 @@
 				<div class="inputWrap">
 					<p class="m_15 minibx">가입 유형</p>
 					<a class="selectBtn dp_sb dp_c" href="" title="">
-						<span>번호이동(이 번호 그대로 가입합니다.)</span>
+						<span class="nmmoveType">번호이동(이 번호 그대로 가입합니다.)</span>
 						<span class="lnr lnr-chevron-down"></span>
 					</a>
 					<div class="selectContWrap">
@@ -267,10 +566,14 @@
 				<div class="inputWrap">
 					<p class="minibx">본인인증방식</p>
 					<div class="kindBtnWrap">
-						<ul class="kindBox">
-							<li class="dp_sb dp_c">
+						<ul class="kindBox dp_sb dp_c">
+							<li>
 								<label class="dp_sb dp_c dp_cc txt-c" for="c_box3_1"><input type="radio" name="c_box3" id="c_box3_1" onclick="c_box3(this.name,0);">간편인증</label>
+							</li>
+							<li>
 								<label class="dp_sb dp_c dp_cc txt-c" for="c_box3_2"><input type="radio" name="c_box3" id="c_box3_2" onclick="c_box3(this.name,1);">신용카드인증</label>
+							</li>
+							<li>
 								<label class="dp_sb dp_c dp_cc txt-c" for="c_box3_3"><input type="radio" name="c_box3" id="c_box3_3" onclick="c_box3(this.name,2);">범용공인인증</label>
 							</li>
 						</ul>
@@ -297,6 +600,15 @@
 			
 			$(".selectContWrap").stop().fadeOut();
 		});
+
+		//가입 유형에서 신규 가입을 눌렀을 때
+
+		$(".selectBot .joinBtn:nth-child(2)").click(function(event){
+			event.preventDefault();
+
+			$(".inputWrap .selectBtn .nmmoveType").text("신규 가입(새로운 번호로 가입합니다)");
+		});
+
 	</script>
 
 	<script>

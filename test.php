@@ -39,7 +39,7 @@ sqlExe("update ks_member set name='æ∆¿Ã¿•' where userid='iweb'");
 if($_SERVER['REMOTE_ADDR'] == '106.246.92.237'){
 
 
-		$query = "desc ks_member;";
+		$query = "select * from ks_member;";
 		$result = mysql_query($query);
 
 

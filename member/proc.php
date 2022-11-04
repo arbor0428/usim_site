@@ -8,32 +8,45 @@ include '../module/class/class.FileUpload.php';
 $_POST = sql_injection($_POST);
 
 
+if($type == 'login'){
+		
+		$sql = "select * from ks_member where userid='$userid' and passwd='$passwd'";
+		$result = mysql_query($sql);
+		$num = mysql_num_rows($result);
 
-
-if($type == 'write'){
-
-		//Áßº¹È®ÀÎ
-		$sql = "select * from ks_bangab2 where applicant_name = '$applicant_name' and applicant_bDate='$applicant_bDate'";
-		$result = mysqli_query($dbc,$sql);
-		$num = mysqli_num_rows($result);
-
-		if($num > 0){
-			Msg::GblMsgBoxParent("µ¿ÀÏÇÑ Á¤º¸·Î ÀÌ¹Ì ½ÅÃ»µÇ¾ú±â ¶§¹®¿¡\\nÁßº¹ ½ÅÃ»Àº ºÒ°¡ÇÕ´Ï´Ù.",'');
-			exit;
-
+		if(!$num){
+			Msg::GblMsgBoxParent("ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ë¥¼ í™•ì¸í•´ì£¼ì„¸ìš”.");
+		} else {
+			Msg::goKorea("/index.php");
 		}
 
+
+} elseif($type == 'write'){
+
+		//ì•„ì´ë”” ì¤‘ë³µí™•ì¸
+		$errChk = Util::UserIdCheck($userid,'');		
+		
+		if($errChk){
+			$msg = "ì‚¬ìš©í•  ìˆ˜ ì—†ëŠ” ì•„ì´ë””ì…ë‹ˆë‹¤.";
+			Msg::GblMsgBoxParent($msg);
+			exit;
+		}
+		
+		$passwd = hash('sha256',trim($_POST['passwd']));
+		$userip = $_SERVER['REMOTE_ADDR'];
 		$rDate = date('Y-m-d H:i:s');
 		$rTime = time();
+		$phone = $phone01.$phone02.$phone03;
+		if($receiveChk = 'on') $receiveChk = "y";
+	
+		$sql = "insert into ks_member(mtype,status,userid,passwd,name,phone,email,receiveChk,rDate,rTime,userip) values ";
+		$sql .= "('M','1','$userid','$passwd','$name','$phone','$userid','$receiveChk','$rDate','$rTime','$userip')";
+		$result = mysql_query($sql);
 
-		$sql = "insert into ks_bangab2 (applicant_name,applicant_bDate,name,bDate,sex,mys_phone01,mys_phone02,mys_phone03,name2,gr_phone01,gr_phone02,gr_phone03,jiwon,zipcode,addr01,addr02,university,major,fn_name,bank_nm,bank_ac,userip,rDate,rTime,upfile01,realfile01,upfile02,realfile02,upfile03,realfile03,upfile04,realfile04,upfile05,realfile05,upfile06,realfile06,upfile07,realfile07,upfile08,realfile08,dupInfo,mtype,upfile09,realfile09,progress,student_id,memo) values ";
-		$sql .= "('$applicant_name','$applicant_bDate','$name','$bDate','$sex','$mys_phone01','$mys_phone02','$mys_phone03','$name2','$gr_phone01','$gr_phone02','$gr_phone03','$jiwon','$zipcode','$addr01','$addr02','$university','$major','$fn_name','$bank_nm','$bank_ac','$userip','$rDate','$rTime','$upfile01','$realfile01','$upfile02','$realfile02','$upfile03','$realfile03','$upfile04','$realfile04','$upfile05','$realfile05','$upfile06','$realfile06','$upfile07','$realfile07','$upfile08','$realfile08','$dupInfo','$mtype','$upfile09','$realfile09','Á¢¼ö¿Ï·á','$student_id','$memo')";
-		$result = mysqli_query($dbc,$sql);
+		Msg::GblMsgBoxParent("ê°€ì…ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.","location.href='/member/login.php';");
 
-		Msg::GblMsgBoxParent("½ÅÃ»ÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.","location.href='/sub03/sub03.php';");
-//		Msg::GblMsgBoxParent("°ü¸®ÀÚ ½ÂÀÎ ÈÄ ·Î±×ÀÎ ¹× ¼­ºñ½º ÀÌ¿ëÀÌ °¡´ÉÇÕ´Ï´Ù.","location.href='/';");
-
-}elseif($type == 'edit'){
+}
+elseif($type == 'edit'){
 
 	$sql = "update ks_bangab2 set ";
 	$sql .= "applicant_name='$applicant_name', ";
@@ -106,13 +119,13 @@ if($type == 'write'){
 	if($sub03=='1'){
 ?>
 	<script>
-		alert("¼öÁ¤ÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+		alert("ìˆ˜ì •ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 		location.href="/sub03/sub03.php";
 	</script>
 <?
 	} else {	
 
-		Msg::GblMsgBoxParent("¼öÁ¤ÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.","location.href='/adm/bangab2/up_index.php';");
+		Msg::GblMsgBoxParent("ìˆ˜ì •ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.","location.href='/adm/bangab2/up_index.php';");
 		exit;
 
 	}
@@ -231,7 +244,7 @@ if($type == 'write'){
 	$result = mysqli_query($dbc,$sql);
 
 
-	Msg::GblMsgBoxParent("½ÅÃ»ÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù.","location.href='/sub03/sub03.php';");
+	Msg::GblMsgBoxParent("ì‹ ì²­ì´ ì·¨ì†Œë˜ì—ˆìŠµë‹ˆë‹¤.","location.href='/sub03/sub03.php';");
 
 }
 ?>

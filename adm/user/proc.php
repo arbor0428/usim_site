@@ -4,7 +4,7 @@ include "../../module/class/class.Msg.php";
 include "../../module/class/class.Util.php";
 include '../../module/enc_func.php';
 
-$_POST = sql_injection($_POST);
+
 
 $type = trim($_POST['type']);
 

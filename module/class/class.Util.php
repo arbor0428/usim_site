@@ -530,6 +530,21 @@ class Util
 	}
 
 
+	//아이디 중복확인
+	function UserIdCheck($userid,$uid){
+		$chk = true;
+
+		//가입된 고객
+		$sql = "select * from ks_member where userid='$userid'";
+		$result = mysql_query($sql);
+		$record_cnt = mysql_num_rows($result);
+
+		if($record_cnt == 0)	$chk = false;
+
+		return $chk;
+	}
+
+
 
 }
 

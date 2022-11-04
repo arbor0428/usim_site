@@ -130,7 +130,7 @@ textarea {padding: 10px; box-sizing: border-box; width: 100%; height: 100%; resi
 
 
 .wid100 {width: 100% !important;}
-.wid49 {width: 49%;}
+.wid49 {width: 49% !important;}
 .wid23 {width: 23%;}
 .wid18 {width: 18%;}
 .wid31 {width: 31% !important;}
@@ -206,7 +206,9 @@ input[type="radio"]:checked::after {display: block;}
 
 input[type="text"]:focus,
 input[type="date"]:focus,
-textarea:focus {
+input[type="password"]:focus,
+textarea:focus,
+select:focus{
 	background-color: #fff;
 	outline: 0;
 	box-shadow: 0 0 0 0.125rem rgba(26, 110, 202, .5);

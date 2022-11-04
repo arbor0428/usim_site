@@ -2,18 +2,118 @@
 	include '../header.php';
 ?>
 
-./join_fin.php
 <script>
+function checkID(c){
+	form = document.FRM;
+
+	if(isFrmEmptyModal(form.userid,"아이디를 입력해 주십시오."))	return true;
+
+	ID = form.userid.value;
+	exptext = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+
+	if(exptext.test(ID)==false){
+		//이메일 형식이 알파벳+숫자@알파벳+숫자.알파벳+숫자 형식이 아닐경우			
+		GblMsgBox("이메일형식이 올바르지 않습니다.");
+		form.email.focus();
+
+		return false;
+	}
+
+
+	if(c){
+		userid = $('#id').val();
+
+		$.post('/module/common/UserIdCheck.php',{'userid':userid}, function(cnt){
+			if(cnt != 0){
+				GblMsgBox('사용할 수 없는 아이디입니다.','');
+				form.userid.focus();
+
+			}else{
+				GblMsgBox('사용 가능한 아이디입니다.','');
+				form.pwd.focus();
+			}
+		});
+	}
+}
+
+
+function pwdChk(){
+	pwd01 = $('#pw').val();
+	pwd02 = $('#re_pw').val();
+
+	pwdTxt = '';
+	pwdColor = '#ff0000';
+
+	if(pwd01 && pwd02){
+		if(pwd01 == pwd02){
+			pwdTxt = '비밀번호 일치';
+			pwdColor = '#0000ff';
+		}else{
+			pwdTxt = 'ⓘ 비밀번호가 일치하지 않습니다.';
+			pwdColor = '#ff0000';
+		}
+	}
+
+	$('#pwdTxt').css('color',pwdColor);
+	$('#pwdTxt').text(pwdTxt);
+}
+
+
 function check_form(){
 
 	form = document.FRM;
 
-	if(isFrmEmptyModal(form.email,"이메일을 입력해 주십시오."))	return;
+	if(checkID())	return;
+
 	if(isFrmEmptyModal(form.passwd,"비밀번호를 입력해 주십시오."))	return;
+	if(isFrmEmptyModal(form.re_pw,"비밀번호 확인을 입력해 주십시오."))	return;
 
+	passwd = form.passwd.value;
+	re_pw = form.re_pw.value;
+
+	if(passwd || re_pw){
+		if(isFrmEmptyModal(form.passwd,"신규 비밀번호를 입력해 주십시오."))	return;
+		if(isFrmEmptyModal(form.re_pw,"신규 비밀번호를 한번더 입력해 주십시오."))	return;
+
+		if(form.passwd.value != form.re_pw.value){
+			GblMsgBox("비밀번호를 확인해 주십시오.");
+			form.re_pw.focus();
+			return;
+		}
+
+		if(passwd.length < 6 || passwd.length > 10){
+			GblMsgBox("비밀번호는 6~10자 이내입니다.");
+			form.passwd.focus();
+			return;
+		}
+	}
+
+	if(isFrmEmptyModal(form.name,"이름을 입력해 주십시오."))	return;
+	
+	if (!form.yesChk01.checked) {
+      alert("약관 동의가 필요합니다.");
+      form.yesChk01.focus();
+      return false;
+	};
+
+   if (!form.yesChk02.checked) {
+      alert("약관 동의가 필요합니다.");
+      form.yesChk02.focus();
+      return false;
+    };
+
+    if (!form.yesChk04.checked) {
+      alert("약관 동의가 필요합니다.");
+      form.yesChk04.focus();
+      return false;
+    };
+
+
+	form.type.value = 'write';
+	form.target = 'ifra_gbl';
+	form.action = 'proc.php';
+	form.submit();
 }
-
-
 </script>
 
 <form name='FRM' id='FRM' method='post' action='<?=$PHP_SELF?>'>
@@ -24,18 +124,22 @@ function check_form(){
 		<div class="wht01 p-50 p_50">
 			<div class="l_center">
 				<p class="joinSubTit">회원 가입</p>
-				<div class="inputWrap l_inputWrap">
+				<div class="inputWrap l_inputWrap idInputWrap">
 					<label for="id">아이디(이메일)</label>
-					<input id="id" type="text" name="email" placeholder="아이디(이메일)">
-					<span class="status c_red">ⓘ 이미 가입한 사용자 아이디(이메일) 입니다.</span>
+					<div class="dp_sb dp_c">
+						<input id="id" type="text" name="userid" placeholder="아이디(이메일)">
+						<a class="doubleChk dp_f dp_c dp_cc gradient c_w" onclick="checkID(1);">중복체크</a>
+					</div>
+					<span class="status c_red idstaus"></span>
 				</div>
 				<div class="inputWrap l_inputWrap">
 					<label for="pw">비밀번호</label>
-					<input id="pw" type="text" name="passwd" placeholder="비밀번호">
-					<span class="status c_red">ⓘ 영문/숫자/특수문자 중 2개 이상을 이용하여 8자 이상 입력해주세요.</span>
+					<input id="pw" type="password" name="passwd" placeholder="비밀번호" onkeyup ="pwdChk()" >
+					<span class="status c_red pwstaus"></span>
 				</div>
 				<div class="inputWrap l_inputWrap">
-					<input id="re_pw" type="text" placeholder="비밀번호 확인">
+					<input id="re_pw" type="password" name="re_pw" placeholder="비밀번호 확인" onkeyup ="pwdChk()">
+					<span id="pwdTxt" class="status c_red pwpaststaus"></span>
 				</div>
 				<div class="inputWrap l_inputWrap">
 					<label for="nm">이름</label>
@@ -44,11 +148,11 @@ function check_form(){
 				<div class="inputWrap l_inputWrap">
 					<label for="">휴대폰 번호</label>
 					<div class="dp_sb dp_c">
-						<input class="wid31" id="" type="text" name="phone">
+						<input class="wid31" id="" type="text" name="phone01" value="010" readonly>
 						-
-						<input class="wid31" id="" type="text" name="phone">
+						<input class="wid31" id="" type="text" name="phone02" value="2991" readonly>
 						-
-						<input class="wid31" id="" type="text" name="phone">
+						<input class="wid31" id="" type="text" name="phone03" value="7287" readonly>
 					</div>
 				</div>
 				<p class="joinSubTit">서비스 이용약관에 동의 해주세요.</p>
@@ -61,7 +165,7 @@ function check_form(){
 					<div class="yesChkWrap">
 						<div class="dp_sb dp_wrap">
 							<div class="yesChk blackChk">
-								<input id="yesChk01" type="checkbox" autocomplete="off">
+								<input id="yesChk01" type="checkbox" name="yesChk01" autocomplete="off">
 								<label for="yesChk01" class="medium c_gry03"><span class="c_red medium">*(필수)</span>통신서비스 이용약관</label>
 							</div>
 							<a class="yesLnk" href="" title="">
@@ -77,7 +181,7 @@ function check_form(){
 					<div class="yesChkWrap">
 						<div class="dp_sb dp_wrap">
 							<div class="yesChk blackChk">
-								<input id="yesChk02" type="checkbox" autocomplete="off">
+								<input id="yesChk02" type="checkbox" name="yesChk02" autocomplete="off">
 								<label for="yesChk02" class="medium c_gry03"><span class="c_red medium">*(필수)</span>개인정보 수집 및 이용 동의</label>
 							</div>
 							<a class="yesLnk" href="" title="">
@@ -93,7 +197,7 @@ function check_form(){
 					<div class="yesChkWrap">
 						<div class="dp_sb dp_wrap">
 							<div class="yesChk blackChk">
-								<input id="yesChk04" type="checkbox" autocomplete="off">
+								<input id="yesChk04" type="checkbox" name="yesChk04" autocomplete="off">
 								<label for="yesChk04" class="medium c_gry03"><span class="c_red medium">*(필수)</span>개인정보 제3자 제공 동의</label>
 							</div>
 							<a class="yesLnk" href="" title="">
@@ -130,8 +234,8 @@ function check_form(){
 
 </form>
 
-
 <script>
+
     //동의 상세 펼치기 접기
     $(".yesLnk").on("click",function(event){
         event.preventDefault();
@@ -159,7 +263,92 @@ function check_form(){
             $(this).parents().parents(".joinWrap02").children(".yesChkWrap").children().children().find('input').prop("checked", false);
         }
     });
+/*
+	//아이디 기존 사용자 이메일 일 경우
+	function chkID(){
+
+		var id = $("#id").val();
+		var idpast = //기존 사용자 이메일'
+
+	
+
+		 if(id != idpast){
+
+			$(".idstaus").text("ⓘ 이미 가입한 사용자 아이디(이메일) 입니다.");
+			
+			return false;
+
+		}else {
+			
+			$(".idstaus").text("");
+			
+			return true;
+		 }
+
+	}
+
+
+	//비밀번호 영문 숫자 특수문자 혼합
+	function chkPW(){
+
+		var pw = $("#pw").val();
+		var pwpast= $("#pw").val();
+		var num = pw.search(/[0-9]/g);
+		var eng = pw.search(/[a-z]/ig);
+		var spe = pw.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
+
+		 if(pw.length < 8 || pw.length > 20){
+
+			$(".pwstaus").text("ⓘ 8자리 ~ 20자리 이내로 입력해주세요.");
+
+			return false;
+
+		}else if(pw.search(/\s/) != -1){
+
+			$(".pwstaus").text("ⓘ 비밀번호는 공백 없이 입력해주세요.");
+
+			return false;
+
+		 }else if(num < 0 || eng < 0 || spe < 0 ){
+
+			$(".pwstaus").text("ⓘ 영문,숫자, 특수문자를 혼합하여 입력해주세요.");
+
+			return false;
+
+		}else {
+
+			$(".pwstaus").text("");
+
+			return true;
+
+		 }
+
+	}
+
+	//비밀번호 & 비밀번호 확인 일치 하지 않을 때
+	function rechkPW(){
+
+		var pw = $("#pw").val();
+		var pwpast= $("#re_pw").val();
+
+		
+		 if(pw != pwpast){
+
+			$(".pwpaststaus").text("ⓘ 비밀번호가 다릅니다.");
+			
+			return false;
+
+		}else {
+			
+			$(".pwpaststaus").text("");
+			
+			return true;
+		 }
+
+	}
+*/
 </script>
+
 
 <?
 	include '../footer.php';

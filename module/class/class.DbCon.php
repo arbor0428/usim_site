@@ -11,8 +11,6 @@ class DbCon
 				  or die("데이타베이스 연결에 실패했습니다.");
 		$status = mysql_select_db($this->DB, $dbconn);
 
-//		mysql_query('set names euckr');
-
 		if($status)
 			return $dbconn;
 		else

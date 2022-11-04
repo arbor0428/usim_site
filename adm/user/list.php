@@ -170,12 +170,14 @@ function ifra_xls(){
 				<th>상태</th>
 				<th>등급</th>
 				<th>아이디</th>
+				<th>이름</th>
+				<th>포인트</th>
+				<!--
 				<th>추천인</th>
 				<th>생년월일</th>
-				<th>이름</th>
-				<th>성별</th>
-				<th>포인트</th>
+				<th>성별</th>				
 				<th>보유쿠폰</th>
+				-->
 				<th>연락처</th>
 				<th>이메일</th>
 				<th width='120'>가입일시</th>
@@ -225,12 +227,15 @@ if($total_record){
 				<td><?=$i?></td>
 				<td><?=$statusTxt?></td>
 				<td><?=$levelTxt?></td>
-				<td><?=$userid?></td>
+				<td><?=$email?></td>
+				<td><?=$name?></td>
+				<td><?=number_format($point)?></td>
+				<!--
 				<td><?=$rCode?></td>
 				<td><?=$bDate?></td>
-				<td><?=$name?></td>
 				<td><?=$genderTxt?></td>
-				<td><?=number_format($point)?></td>
+			
+				
 				<td>
 				<?
 					//사용가능한 보유쿠폰
@@ -240,6 +245,7 @@ if($total_record){
 					}
 				?>
 				</td>
+				-->
 				<td><?=$phone?></td>
 				<td><?=$email?></td>
 				<td><?=$rDate?></td>
