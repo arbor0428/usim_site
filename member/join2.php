@@ -6,7 +6,7 @@
 function checkID(c){
 	form = document.FRM;
 
-	if(isFrmEmptyModal(form.userid,"아이디를 입력해 주십시오."))	return true;
+	if(isFrmEmptyModal(form.userid,"아이디(이메일)를 입력해 주십시오."))	return true;
 
 	ID = form.userid.value;
 	exptext = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
@@ -37,26 +37,63 @@ function checkID(c){
 }
 
 
-function pwdChk(){
-	pwd01 = $('#pw').val();
-	pwd02 = $('#re_pw').val();
+function chkPW(){
 
-	pwdTxt = '';
-	pwdColor = '#ff0000';
+		var pw = $("#pw").val();
+		var pwpast= $("#pw").val();
+		var num = pw.search(/[0-9]/g);
+		var eng = pw.search(/[a-z]/ig);
+		var spe = pw.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
 
-	if(pwd01 && pwd02){
-		if(pwd01 == pwd02){
-			pwdTxt = '비밀번호 일치';
-			pwdColor = '#0000ff';
-		}else{
-			pwdTxt = 'ⓘ 비밀번호가 일치하지 않습니다.';
-			pwdColor = '#ff0000';
-		}
+		 if(pw.length < 8 || pw.length > 20){
+
+			$(".pwstaus").text("ⓘ 8자리 ~ 20자리 이내로 입력해주세요.");
+
+			return false;
+
+		}else if(pw.search(/\s/) != -1){
+
+			$(".pwstaus").text("ⓘ 비밀번호는 공백 없이 입력해주세요.");
+
+			return false;
+
+		 }else if(num < 0 || eng < 0 || spe < 0 ){
+
+			$(".pwstaus").text("ⓘ 영문,숫자, 특수문자를 혼합하여 입력해주세요.");
+
+			return false;
+
+		}else {
+
+			$(".pwstaus").text("");
+
+			return true;
+
+		 }
+
 	}
 
-	$('#pwdTxt').css('color',pwdColor);
-	$('#pwdTxt').text(pwdTxt);
-}
+	//비밀번호 & 비밀번호 확인 일치 하지 않을 때
+	function rechkPW(){
+
+		var pw = $("#pw").val();
+		var pwpast= $("#re_pw").val();
+
+		
+		 if(pw != pwpast){
+
+			$(".pwpaststaus").text("ⓘ 비밀번호가 다릅니다.");
+			
+			return false;
+
+		}else {
+			
+			$(".pwpaststaus").text("");
+			
+			return true;
+		 }
+
+	}
 
 
 function check_form(){
@@ -91,19 +128,19 @@ function check_form(){
 	if(isFrmEmptyModal(form.name,"이름을 입력해 주십시오."))	return;
 	
 	if (!form.yesChk01.checked) {
-      alert("약관 동의가 필요합니다.");
+      GblMsgBox("통신서비스 이용약관을 동의 주십시오.");
       form.yesChk01.focus();
       return false;
 	};
 
    if (!form.yesChk02.checked) {
-      alert("약관 동의가 필요합니다.");
+      GblMsgBox("개인정보 수집 및 이용약관을 동의해 주십시오.");
       form.yesChk02.focus();
       return false;
     };
 
     if (!form.yesChk04.checked) {
-      alert("약관 동의가 필요합니다.");
+      GblMsgBox("개인정보 제3자 제공약관을 동의해 주십시오.");
       form.yesChk04.focus();
       return false;
     };
@@ -134,11 +171,11 @@ function check_form(){
 				</div>
 				<div class="inputWrap l_inputWrap">
 					<label for="pw">비밀번호</label>
-					<input id="pw" type="password" name="passwd" placeholder="비밀번호" onkeyup ="pwdChk()" >
+					<input id="pw" type="password" name="passwd" placeholder="비밀번호" onkeyup ="chkPW()" >
 					<span class="status c_red pwstaus"></span>
 				</div>
 				<div class="inputWrap l_inputWrap">
-					<input id="re_pw" type="password" name="re_pw" placeholder="비밀번호 확인" onkeyup ="pwdChk()">
+					<input id="re_pw" type="password" name="re_pw" placeholder="비밀번호 확인" onkeyup ="rechkPW()">
 					<span id="pwdTxt" class="status c_red pwpaststaus"></span>
 				</div>
 				<div class="inputWrap l_inputWrap">

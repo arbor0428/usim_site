@@ -7,7 +7,19 @@ function check_form(){
 	
 	form = document.FRM;
 
-	if(isFrmEmptyModal(form.email,"이메일을 입력해 주십시오."))	return;
+	if(isFrmEmptyModal(form.userid,"아이디(이메일)를 입력해 주십시오."))	return true;
+
+	ID = form.userid.value;
+	exptext = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+
+	if(exptext.test(ID)==false){
+		//이메일 형식이 알파벳+숫자@알파벳+숫자.알파벳+숫자 형식이 아닐경우			
+		GblMsgBox("이메일형식이 올바르지 않습니다.");
+		form.email.focus();
+
+		return false;
+	}
+	
 	if(isFrmEmptyModal(form.passwd,"비밀번호를 입력해 주십시오."))	return;
 
 	form.type.value = 'login';
@@ -28,7 +40,7 @@ function check_form(){
 				<h3 class="sub_tit bold2">로그인</h3>
 				<div class="inputWrap l_inputWrap">
 					<label for="id">아이디(이메일)</label>
-					<input id="id" type="text" name="email" placeholder="아이디(이메일)">
+					<input id="id" type="text" name="userid" placeholder="아이디(이메일)">
 				</div>
 				<div class="inputWrap l_inputWrap">
 					<label for="password">비밀번호</label>

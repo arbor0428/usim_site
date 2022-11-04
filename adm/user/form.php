@@ -85,9 +85,6 @@ function formChk(){
 
 	if(isFrmEmpty(form.name,"이름을 입력해 주십시오."))	return;
 	if(isFrmEmpty(form.phone,"연락처를 입력해 주십시오."))	return;
-	if(isFrmEmpty(form.zipcode,"우편번호를 입력해 주십시오."))	return;
-	if(isFrmEmpty(form.addr01,"기본주소를 입력해 주십시오."))	return;
-	if(isFrmEmpty(form.addr02,"상세주소를 입력해 주십시오."))	return;
 	if(isFrmEmpty(form.email,"이메일을 입력해 주십시오."))	return;
 
 	email = $('#email').val();
@@ -202,6 +199,17 @@ function userDel(){
 	</div>
 
 	<div class="cols">
+		<div class="cols_20 cols_ th"><span class='eqc'>*</span>이메일</div>
+		<div class="cols_80 cols_">
+			<div class="form-group">
+				<input type="text" name="email" id="email" class="form-control input-50" value="<?=$email?>">
+			</div>
+		</div>
+	</div>
+
+
+<!--
+	<div class="cols">
 		<div class="cols_20 cols_ th"><span class='eqc'>*</span>주소</div>
 		<div class="cols_80 cols_">
 			<div class="form-group">
@@ -212,15 +220,7 @@ function userDel(){
 		</div>
 	</div>
 
-	<div class="cols">
-		<div class="cols_20 cols_ th"><span class='eqc'>*</span>이메일</div>
-		<div class="cols_80 cols_">
-			<div class="form-group">
-				<input type="text" name="email" id="email" class="form-control input-50" value="<?=$email?>">
-			</div>
-		</div>
-	</div>
-<!--
+
 	<div class="cols">
 		<div class="cols_20 cols_ th"><span class='eqc'>*</span>생년월일</div>
 		<div class="cols_80 cols_">

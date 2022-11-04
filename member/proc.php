@@ -6,6 +6,7 @@ include '../module/class/class.Msg.php';
 include '../module/class/class.FileUpload.php';
 
 $_POST = sql_injection($_POST);
+$passwd = hash('sha256',trim($_POST['passwd']));
 
 
 if($type == 'login'){
@@ -32,7 +33,6 @@ if($type == 'login'){
 			exit;
 		}
 		
-		$passwd = hash('sha256',trim($_POST['passwd']));
 		$userip = $_SERVER['REMOTE_ADDR'];
 		$rDate = date('Y-m-d H:i:s');
 		$rTime = time();
