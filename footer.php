@@ -144,7 +144,7 @@ include '/home/hanpass/www/module/popupoverlay.php';
 </script>
 <script type="text/javascript">
 	function googleTranslateElementInit() {
-		new google.translate.TranslateElement({pageLanguage: 'ko', includedLanguages: 'en,id,kk,ko,fil,ru,th,vi,zh-CN,zh-TW,si,ne,uz,my,tl,pt,km,mn,bn,ur', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+		new google.translate.TranslateElement({pageLanguage: 'ko', includedLanguages: 'en,id,kk,ko,fil,ru,th,vi,zh-CN,zh-TW,si,ne,uz,my,tl,pt,km,mn,bn,ur', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay:true,multilanguagePage: true}, 'google_translate_element');
 	}
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

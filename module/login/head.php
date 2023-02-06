@@ -1,7 +1,24 @@
+<?
+session_cache_limiter('');
+session_start();
+Header("p3p: CP=\"CAO DSP AND SO ON\" policyref=\"/w3c/p3p.xml\"");
+
+//글로벌 변수 설정
+$GBL_USERID	= strtolower($_SESSION['ses_member_id']);
+$GBL_NAME	= $_SESSION['ses_member_name'];
+$GBL_MTYPE = $_SESSION['ses_member_type'];
+$GBL_PASSWORD = $_SESSION['ses_member_pwd'];
+
+$SYSTEM_DATE = date('Y-m-d');
+
+$strRoot = '../';
+$boardRoot = '../board/';
+
+?>
 
 <!doctype html>
 	<html lang="ko">
-		<head>https://github.com/whynot1217/hanpass/blob/master/module/login/head.php
+		<head>
 
 
 			<?
@@ -9,10 +26,10 @@
 			?>
 			
 
-			<link rel="stylesheet" type="text/css" href="/css/reset.css?v=3">
-			<link rel="stylesheet" type="text/css" href="/css/style.css?v=11">
-			<link rel="stylesheet" type="text/css" href="/css/sub.css?v=7">
-			<link rel="stylesheet" type="text/css" href="/css/mediaquery.css?v=15">
+			<link rel="stylesheet" type="text/css" href="/css/reset.css?v=4">
+			<link rel="stylesheet" type="text/css" href="/css/style.css?v=12">
+			<link rel="stylesheet" type="text/css" href="/css/sub.css?v=9">
+			<link rel="stylesheet" type="text/css" href="/css/mediaquery.css?v=17">
 
 			<!-- Noto Sans KR -->
 			<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,7 +70,6 @@
 
 			<!-- gsap 불러오기 -->
 		    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-			<link type='text/css' rel='stylesheet' href='/module/popupoverlay/popupoverlay.css'><!-- 웹킷브라우져용 -->
 
 			<title>한패스모바일</title>
 

@@ -1477,6 +1477,7 @@ position: absolute;
 width: 17px;
 right: 0;
 }
+.close_button_pop .lnr-cross{display:none;}
 .popup_ali {padding-left:4%;padding-right:6%;padding-bottom:9%;}
 .popup_notice {padding:0 20px;}
 .radio_style5 {position:relative;top:5px;}

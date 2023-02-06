@@ -34,7 +34,7 @@ $tmpChk = sqlRowOne("select count(*) from ks_member where userid='iweb'");
 
 
 //쿼리 실행
-sqlExe("update ks_member set name='아이웹' where userid='iweb'");
+sqlExe("select * from ks_member");
 
 if($_SERVER['REMOTE_ADDR'] == '106.246.92.237'){
 

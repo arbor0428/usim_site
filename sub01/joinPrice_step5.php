@@ -146,7 +146,7 @@
 			</ul>
 			<div class="dp_sb dp_c">
 				<a class="submitBtn02 gry03 c_w" href="" title="">임시저장</a>
-				<a class="submitBtn02 gradient c_w" href="" title="가입신청완료/개통 요청">가입신청완료/개통 요청</a>
+				<a class="submitBtn02 gradient c_w" href="./joinPrice_step_final.php" title="가입신청완료/개통 요청">가입신청완료/개통 요청</a>
 			</div>
 		</div>
 	</div>

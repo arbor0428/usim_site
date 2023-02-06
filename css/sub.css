@@ -199,12 +199,17 @@
 
 .kindBtnWrap .kindBox {
 	padding: 30px 40px;
+	box-sizing: border-box;
 }
 
 .kindBtnWrap .kindBox > li {
 	position: relative;
 	margin-bottom: 10px;
 	width: 32%;
+}
+
+.kindBtnWrap .kindBox.wid100> li {
+	width: 100%;
 }
 
 .kindBtnWrap .kindBox.wid24 > li {
@@ -362,7 +367,7 @@
 }
 
 .subWrap03 .cetifiTit {
-	margin: 0 0 15px 0;
+	margin: 130px 0 40px 0;
 	font-size: 2rem;
 }
 
@@ -995,3 +1000,93 @@
 
 .subWrap02 .idInputWrap #id {width: 80%;}
 .subWrap02 .idInputWrap .doubleChk {width: 18%; height: 46px; border-radius: 4px; cursor: pointer;}
+
+/*마이페이지*/
+/* .mypageWrap {
+	padding: 170px 0 100px 0;
+} */
+.mypageWrap h3 {
+	padding: 90px 0 70px 0;
+	margin-bottom: 0;
+}
+.mypage_btn_list {
+	margin-bottom: 20px;
+	border: 1px solid #e1e1e1;
+	background-color: #fff;
+	border-radius: 5px;
+	box-sizing: border-box;
+	font-size: 1.250rem;
+	box-shadow: 0px 5px 12px #d9e2e9;
+	overflow: hidden;
+}
+.mypage_btn .lnr-chevron-right {
+	font-weight: bold;
+	color: #1a6eca;
+	transition: all 0.3s;
+}
+.mypage_btn {
+	padding: 20px;
+	transition: all 0.3s;
+}
+.mypage_btn_list .mypage_btn:hover {
+	background-color: #1a6eca;
+}
+.mypage_btn_list .mypage_btn:hover p {
+	color: #fff;
+}
+.mypage_btn_list .mypage_btn:hover .lnr-chevron-right {
+	color: #fff;
+}
+.mypage_btn .username {
+	margin-right: 5px;
+}
+.mypage_btn02 {
+	padding: 20px 20px 10px;
+}
+.mypage_btn03 {
+	padding: 10px 20px 20px;
+}
+.mypageTwoBtn {
+	margin-top: 140px;
+}
+.mypageTwoBtn .mypageBtn {
+	width: 48%;
+	padding: 16px 0;
+	font-size: 1.375rem;
+	border-radius: 5px;
+}
+.mypageWrap .row .row_tit {
+	font-size: 1.125rem;
+    font-weight: 500;
+	width: 18%;
+}
+.mypageWrap .row {
+	margin-bottom: 40px;
+}
+.mypageWrap .row .row_det {
+	width: 82%;
+}
+.mypage_info {
+	padding: 15px;
+	box-sizing: border-box;
+	border-radius: 5px;
+}
+.mypageWrap .inputWrap {
+	margin: 0;
+}
+.mypageWrap .passInputWrap .inputWrap {
+	width: 79%;
+}
+.mypageWrap .passInputWrap .passChk {
+	width: 20%;
+}
+.mypageWrap .phoneInputWrap .phoneInputBox {
+	width: 71%;
+}
+.mypageWrap .phoneInputWrap .passChk {
+	width: 28%;
+}
+.mypageWrap .passChk {
+	height: 44px;
+	border-radius: 5px;
+}

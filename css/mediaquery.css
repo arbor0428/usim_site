@@ -429,6 +429,27 @@
         padding-top: 20px;
     }
 
+    /*마이페이지*/
+    .mypageWrap .row .row_tit {
+        width: 22%;
+        font-size: 1rem;
+    }
+    .mypageWrap .row .row_det {
+        width: 78%;
+    }
+
+    .mypageTwoBtn .mypageBtn {
+        padding: 15px 0;
+        font-size: 1.125rem;
+    }
+    .mypageWrap .passInputWrap .inputWrap {
+        width: 75%;
+    }
+    .mypageWrap .passInputWrap .passChk {
+        width: 24%;
+    }
+    
+
 }
 
 @media (max-width:575px) {
@@ -499,6 +520,7 @@
         height: 3px;
     }
 	.subWrap03 .cetifiTit {
+        margin: 60px 0 40px 0;
 		font-size: 1.3rem;
 	}
 	.subWrap03 .cetifiFin {
@@ -865,6 +887,9 @@
     .subWrap02 .kindBtnWrap .kindBox > li span {
         width: 26%;
     }
+	.kindBtnWrap .kindBox.wid24 > li label {
+		min-height: 62px;
+	}
     .subWrap02 .kindBtnWrap .kindBox > li label {
         margin-bottom: 0;
     }
@@ -945,6 +970,9 @@
         margin-right: 8px;
         font-size:1.625rem;
     }
+    .minibx {
+        font-size: 1.125rem;
+    }
     .minibx.m_45 {
         margin-bottom: 15px !important;
     }
@@ -957,7 +985,25 @@
     .subtable tr td {
         font-size: 1rem;
     }
-
-
+    
+    .mypage_btn {
+        font-size: 1.125rem;
+    }
+    
+    .mypageWrap .inputWrap {
+        margin: 0;
+    }
+    .mypageWrap .passInputWrap .inputWrap {
+        width: 66%;
+    }
+    .mypageWrap .passInputWrap .passChk {
+        width: 33%;
+    }
+    .mypageWrap .row {
+        margin-bottom: 20px;
+    }
+    .mypageTwoBtn {
+        margin-top: 70px;
+    }
 }
 

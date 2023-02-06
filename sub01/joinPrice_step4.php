@@ -163,7 +163,7 @@
 					<div class="payKindCont"></div>
 				</div>
 			</div>
-			<a class="submitBtn gradient c_w" href="./joinPrice_step5.php" title="결제하기">결제하기</a>
+			<a class="submitBtn gradient c_w" href="./pay_final.php" title="결제하기">결제하기</a>
 		</div>
 	</div>
 </div>

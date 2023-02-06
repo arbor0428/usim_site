@@ -24,7 +24,7 @@ function check_form(){
 
 	form.type.value = 'login';
 	form.target = 'ifra_gbl';
-	form.action = 'proc.php';
+	form.action = '/module/login/login_proc.php';
 	form.submit();
 }
 </script>
@@ -40,11 +40,11 @@ function check_form(){
 				<h3 class="sub_tit bold2">로그인</h3>
 				<div class="inputWrap l_inputWrap">
 					<label for="id">아이디(이메일)</label>
-					<input id="id" type="text" name="userid" placeholder="아이디(이메일)">
+					<input id="id" type="text" name="userid" placeholder="아이디(이메일)" onkeypress="if(event.keyCode==13){check_form();}">
 				</div>
 				<div class="inputWrap l_inputWrap">
 					<label for="password">비밀번호</label>
-					<input id="password" type="password" name="passwd" placeholder="비밀번호">
+					<input id="password" type="password" name="passwd" placeholder="비밀번호" onkeypress="if(event.keyCode==13){check_form();}">
 				</div>
 				<a class="submitBtn gradient c_w" href="javascript:check_form();" title="로그인">로그인</a>
 				<div class="loginBotWrap01 dp_sb">

@@ -164,7 +164,7 @@ function check_form(){
 				<div class="inputWrap l_inputWrap idInputWrap">
 					<label for="id">아이디(이메일)</label>
 					<div class="dp_sb dp_c">
-						<input id="id" type="text" name="userid" placeholder="아이디(이메일)">
+						<input id="id" type="text" name="userid" placeholder="아이디(이메일)" onkeypress="if(event.keyCode==13){check_form();}">
 						<a class="doubleChk dp_f dp_c dp_cc gradient c_w" onclick="checkID(1);">중복체크</a>
 					</div>
 					<span class="status c_red idstaus"></span>
@@ -180,16 +180,16 @@ function check_form(){
 				</div>
 				<div class="inputWrap l_inputWrap">
 					<label for="nm">이름</label>
-					<input id="nm" type="text" name="name" placeholder="이름">
+					<input id="nm" type="text" name="name" placeholder="이름" readonly>
 				</div>
 				<div class="inputWrap l_inputWrap">
 					<label for="">휴대폰 번호</label>
 					<div class="dp_sb dp_c">
 						<input class="wid31" id="" type="text" name="phone01" value="010" readonly>
 						-
-						<input class="wid31" id="" type="text" name="phone02" value="2991" readonly>
+						<input class="wid31" id="" type="text" name="phone02" value="1234" readonly>
 						-
-						<input class="wid31" id="" type="text" name="phone03" value="7287" readonly>
+						<input class="wid31" id="" type="text" name="phone03" value="5678" readonly>
 					</div>
 				</div>
 				<p class="joinSubTit">서비스 이용약관에 동의 해주세요.</p>
@@ -300,90 +300,7 @@ function check_form(){
             $(this).parents().parents(".joinWrap02").children(".yesChkWrap").children().children().find('input').prop("checked", false);
         }
     });
-/*
-	//아이디 기존 사용자 이메일 일 경우
-	function chkID(){
 
-		var id = $("#id").val();
-		var idpast = //기존 사용자 이메일'
-
-	
-
-		 if(id != idpast){
-
-			$(".idstaus").text("ⓘ 이미 가입한 사용자 아이디(이메일) 입니다.");
-			
-			return false;
-
-		}else {
-			
-			$(".idstaus").text("");
-			
-			return true;
-		 }
-
-	}
-
-
-	//비밀번호 영문 숫자 특수문자 혼합
-	function chkPW(){
-
-		var pw = $("#pw").val();
-		var pwpast= $("#pw").val();
-		var num = pw.search(/[0-9]/g);
-		var eng = pw.search(/[a-z]/ig);
-		var spe = pw.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
-
-		 if(pw.length < 8 || pw.length > 20){
-
-			$(".pwstaus").text("ⓘ 8자리 ~ 20자리 이내로 입력해주세요.");
-
-			return false;
-
-		}else if(pw.search(/\s/) != -1){
-
-			$(".pwstaus").text("ⓘ 비밀번호는 공백 없이 입력해주세요.");
-
-			return false;
-
-		 }else if(num < 0 || eng < 0 || spe < 0 ){
-
-			$(".pwstaus").text("ⓘ 영문,숫자, 특수문자를 혼합하여 입력해주세요.");
-
-			return false;
-
-		}else {
-
-			$(".pwstaus").text("");
-
-			return true;
-
-		 }
-
-	}
-
-	//비밀번호 & 비밀번호 확인 일치 하지 않을 때
-	function rechkPW(){
-
-		var pw = $("#pw").val();
-		var pwpast= $("#re_pw").val();
-
-		
-		 if(pw != pwpast){
-
-			$(".pwpaststaus").text("ⓘ 비밀번호가 다릅니다.");
-			
-			return false;
-
-		}else {
-			
-			$(".pwpaststaus").text("");
-			
-			return true;
-		 }
-
-	}
-*/
 </script>
 
 

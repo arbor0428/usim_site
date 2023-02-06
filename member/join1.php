@@ -59,8 +59,8 @@ function niceCheck(t){
 					<li class="dp_f dp_c">휴대폰번호는 나이스평가정보에서 인증 받은 휴대폰번호를 사용하고 있습니다.</li>
 					<li class="dp_f dp_c">개인정보보호법에 따라 인터넷에서 주민등록번호를 대체하는 본인확인 수단인 휴대폰인증서비스를 사용하여 실명인증을 실시하고 있으며, 휴대폰인증서비스는 본인명의의 휴대폰이 아닌경우 인증이 어려우니 이점 참고해 주시기 바랍니다.</li>
 				</ul>
-
-				<a class="submitBtn gradient c_w m-50" href="javascript:niceCheck('mobile');" title="휴대폰 인증">휴대폰 인증</a>
+				<a class="submitBtn gradient c_w m-50" href="join2.php" title="휴대폰 인증">휴대폰 인증</a>
+				<!--<a class="submitBtn gradient c_w m-50" href="javascript:niceCheck('mobile');" title="휴대폰 인증">휴대폰 인증</a>-->
 			</div>
 		</div>
 	</div>

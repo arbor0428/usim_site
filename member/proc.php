@@ -7,22 +7,13 @@ include '../module/class/class.FileUpload.php';
 
 $_POST = sql_injection($_POST);
 $passwd = hash('sha256',trim($_POST['passwd']));
+$loginDate = date('Y-m-d H:i:s');
+$loginTime = time();
+$uid = $_POST['uid'];
+$emailcode = $_POST['emailcode'];
 
 
-if($type == 'login'){
-		
-		$sql = "select * from ks_member where userid='$userid' and passwd='$passwd'";
-		$result = mysql_query($sql);
-		$num = mysql_num_rows($result);
-
-		if(!$num){
-			Msg::GblMsgBoxParent("아이디와 비밀번호를 확인해주세요.");
-		} else {
-			Msg::goKorea("/index.php");
-		}
-
-
-} elseif($type == 'write'){
+if($type == 'write'){
 
 		//아이디 중복확인
 		$errChk = Util::UserIdCheck($userid,'');		
@@ -32,12 +23,12 @@ if($type == 'login'){
 			Msg::GblMsgBoxParent($msg);
 			exit;
 		}
-		
+
+		$phone = $phone01.$phone02.$phone03;
+		if($receiveChk == 'on') $receiveChk = "y";
 		$userip = $_SERVER['REMOTE_ADDR'];
 		$rDate = date('Y-m-d H:i:s');
 		$rTime = time();
-		$phone = $phone01.$phone02.$phone03;
-		if($receiveChk = 'on') $receiveChk = "y";
 	
 		$sql = "insert into ks_member(mtype,status,userid,passwd,name,phone,email,receiveChk,rDate,rTime,userip) values ";
 		$sql .= "('M','1','$userid','$passwd','$name','$phone','$userid','$receiveChk','$rDate','$rTime','$userip')";
@@ -45,7 +36,47 @@ if($type == 'login'){
 
 		Msg::GblMsgBoxParent("가입이 완료되었습니다.","location.href='/member/login.php';");
 
+
+} elseif($type == 'login'){
+		
+		$sql = "select * from ks_member where userid='$userid' and passwd='$passwd'";
+		$result = mysql_query($sql);
+		$num = mysql_num_rows($result);
+
+		if(!$num){
+			Msg::GblMsgBoxParent("아이디와 비밀번호를 확인해주세요.");
+		} else {
+			$sql = "update ks_member set loginDate='$loginDate', loginTime='$loginTime' where userid='$userid'";
+			$result = mysql_query($sql);
+
+			Msg::goKorea("/index.php");
+		}
+
+
+}  elseif($type == 'randCodeChk'){
+		
+		$sql = "select * from ks_member where uid='$uid' and randCode='$emailcode'";
+		$result = mysql_query($sql);
+		$num = mysql_num_rows($result);
+
+		if(!$num){
+			Msg::GblMsgBoxParent("인증코드가 맞지 않습니다.");
+		} else {
+			Msg::goKorea("./findIDPW_step04.php?uid=".$uid);
+		}
+
+} elseif($type == 'changePW'){
+		
+		$sql = "update ks_member set passwd='$passwd', randCode='' where uid='$uid'";
+		
+		$result = mysql_query($sql);
+
+		Msg::goKorea ("./findIDPW_step05.php");
+		
+
 }
+
+/*
 elseif($type == 'edit'){
 
 	$sql = "update ks_bangab2 set ";
@@ -113,7 +144,7 @@ elseif($type == 'edit'){
 	$sql .= "memo='$memo' ";
 
 	$sql .= "where uid=$uid";
-	$result = mysqli_query($dbc,$sql);
+	$result = mysql_query($sql);
 
 
 	if($sub03=='1'){
@@ -136,8 +167,8 @@ elseif($type == 'edit'){
 
 }elseif($type == 'del'){
 	$sql = "select * from ks_bangab2 where uid='$uid'";
-	$result = mysqli_query($dbc,$sql);
-	$row = mysqli_fetch_array($result);
+	$result = mysql_query($sql);
+	$row = mysql_fetch_array($result);
 	
 	for($i=1; $i<=$tot_num; $i++){
 		$file_num = sprintf("%02d",$i);
@@ -147,7 +178,7 @@ elseif($type == 'edit'){
 	}
 			
 	$sql = "delete from ks_bangab2 where uid='$uid'";
-	$result = mysqli_query($dbc,$sql);
+	$result = mysql_query($sql);
 
 	Msg::goKorea("/adm/bangab2/up_index.php");
 	exit;
@@ -158,8 +189,8 @@ elseif($type == 'edit'){
 		$uid = $chk[$k];
 
 		$sql = "select * from ks_bangab2 where uid='$uid'";
-		$result = mysqli_query($dbc,$sql);
-		$row = mysqli_fetch_array($result);
+		$result = mysql_query($sql);
+		$row = mysql_fetch_array($result);
 
 		for($i=1; $i<=$tot_num; $i++){
 			$file_num = sprintf("%02d",$i);
@@ -169,7 +200,7 @@ elseif($type == 'edit'){
 		}
 
 			$sql = "delete from ks_bangab2 where uid='$uid'";
-			$result = mysqli_query($dbc,$sql);
+			$result = mysql_query($sql);
 	}
 
 	Msg::goKorea('/adm/');
@@ -177,8 +208,8 @@ elseif($type == 'edit'){
 } elseif($type == 'self_del'){
 	
 	$sql = "select * from ks_bangab2 where uid='$uid'";
-	$result = mysqli_query($dbc,$sql);
-	$row = mysqli_fetch_array($result);
+	$result = mysql_query($sql);
+	$row = mysql_fetch_array($result);
 
 	$applicant_name = $row['applicant_name'];
 	$applicant_bDate = $row['applicant_bDate'];
@@ -237,14 +268,15 @@ elseif($type == 'edit'){
 
 	$sql = "insert into ks_bangab2_del (applicant_name,applicant_bDate,name,bDate,mys_phone01,mys_phone02,mys_phone03,name2,gr_phone01,gr_phone02,gr_phone03,jiwon,zipcode,addr01,addr02,university,major,fn_name,bank_nm,bank_ac,upfile01,realfile01,upfile02,realfile02,upfile03,realfile03,upfile04,realfile04,upfile05,realfile05,upfile06,realfile06,upfile07,realfile07,upfile08,realfile08,upfile09,realfile09,student_id,rDate,rTime,cDate,cTime,userip,memo) values";
 	$sql .= "('$applicant_name','$applicant_bDate','$name','$bDate','$mys_phone01','$mys_phone02','$mys_phone03','$name2','$gr_phone01','$gr_phone02','$gr_phone03','$jiwon','$zipcode','$addr01','$addr02','$university','$major','$fn_name','$bank_nm','$bank_ac','$upfile01','$realfile01','$upfile02','$realfile02','$upfile03','$realfile03','$upfile04','$realfile04','$upfile05','$realfile05','$upfile06','$realfile06','$upfile07','$realfile07','$upfile08','$realfile08','$upfile09','$realfile09','$student_id','$rDate','$rTime','$cDate','$cTime','$userip','$memo')";
-	$result = mysqli_query($dbc,$sql);
+	$result = mysql_query($sql);
 
 
 	$sql = "delete from ks_bangab2 where uid='$uid'";
-	$result = mysqli_query($dbc,$sql);
+	$result = mysql_query($sql);
 
 
 	Msg::GblMsgBoxParent("신청이 취소되었습니다.","location.href='/sub03/sub03.php';");
 
 }
+*/
 ?>

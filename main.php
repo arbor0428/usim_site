@@ -32,7 +32,7 @@
 </div>
 
 <div class="container">
-	<section id="sec1" class="sec01">
+	<section class="sec01">
 		<div class="c_center">
 			<div class="slickslider">
 				<div class="slickBox">
@@ -203,7 +203,7 @@
 			});
 		</script>
 	</section>
-	<section class="sec03">
+	<section class="sec03" id="secMove01">
 		<div class="c_center">
 			<div class="whtBox">
 				<h3 class="sub_tit bold2 c_blk">
@@ -479,7 +479,7 @@
 			<a class="moreBtn" href="" title="더보기">더보기</a> -->
 		</div>
 	</section>
-	<section id="sec2" class="sec05">
+	<section class="sec05" id="secMove02">
 		<div class="c_center">
 			<div class="whtBox">
 				<h3 class="sub_tit02 regular">
@@ -495,7 +495,7 @@
 							<div class="cardImg"><img src="./images/card2.png" alt=""></div>
 						</div>
 					</div>
-					<a class="submitBtn gradient c_w" href="" title="유심 구매 하기">유심 구매 하기</a>
+					<a class="submitBtn gradient c_w" href="/sub02/sub01.php" title="유심 구매 하기">유심 구매 하기</a>
 					<p class="wht_detail">또는 공용유심을 구매하여 개통을 준비합니다.</p>
 				</div>
 			</div>
@@ -511,7 +511,7 @@
 			});
 		</script>
 	</section>
-	<section  id="sec3" class="sec06 gry01">
+	<section class="sec06 gry01" id="secMove03">
 		<div class="c_center">
 			<div class="whtBox">
 				<h3 class="sub_tit bold2 c_blk">
@@ -553,7 +553,7 @@
 			</div>
 		</div>
 	</section>
-	<section id="sec4" class="sec07">
+	<section class="sec07" id="secMove04">
 		<div class="c_center">
 			<h3 class="sub_tit bold2 c_blk">
 				이벤트
@@ -614,14 +614,24 @@
 		</div>
 	</section>
 </div>
-<!-- 
+
 	<script>
-		//스크롤 이동
-		function fnMove(seq){
-			var offset = $("#cont" + seq).offset();
-			$('html, body').animate({scrollTop : offset.top}, 400);
-		}
-	</script> -->
+
+		//상단 고정 메뉴 해당 영역 스크롤 이동
+		$('.fav_menu > li > a').click(function (event){
+			event.preventDefault();
+
+			const idname = $(this).attr('data_seq');
+			const offset = $("#" + idname).offset();
+			const wid = $('html, body').width();
+
+			if(wid < 600){
+				$('html, body').animate({scrollTop: offset.top - 100}, 300);
+			}else {
+				$('html, body').animate({scrollTop: offset.top - 150}, 300);
+			}
+		});
+	</script>
 
 
 <script>

@@ -12,7 +12,7 @@
                     <input id="regiNum02" type="text" placeholder="E-MAIL 주소 입력">
                 </div>
             </div>
-            <a class="submitBtn gradient c_w" href="./joinPrice_step5.php" title="다음">다음</a>
+            <a class="submitBtn gradient c_w" href="./joinPrice_step4.php" title="다음">다음</a>
         </div>
     </div>
 

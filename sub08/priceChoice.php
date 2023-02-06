@@ -175,7 +175,7 @@
 		<div class="whtBox pt0">
 			<div class="kindBtnWrap">
 				<p class="kindTit bold2">가입 선택</p>
-				<ul class="kindBox">
+				<ul class="kindBox wid100">
 					<li class="dp_sb dp_c">
 						<span>가입유형</span>
 						<label class="dp_sb dp_c dp_cc" for="c_box1_1"><input type="radio" name='c_box1' id="c_box1_1" onclick="c_box1(this.name,0);">번호이동</label>

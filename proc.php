@@ -14,8 +14,8 @@ if($type == 'write'){
 
 		//중복확인
 		$sql = "select * from ks_bangab2 where applicant_name = '$applicant_name' and applicant_bDate='$applicant_bDate'";
-		$result = mysqli_query($dbc,$sql);
-		$num = mysqli_num_rows($result);
+		$result = mysql_query($sql);
+		$num = mysql_num_rows($result);
 
 		if($num > 0){
 			Msg::GblMsgBoxParent("동일한 정보로 이미 신청되었기 때문에\\n중복 신청은 불가합니다.",'');
@@ -28,7 +28,7 @@ if($type == 'write'){
 
 		$sql = "insert into ks_bangab2 (applicant_name,applicant_bDate,name,bDate,sex,mys_phone01,mys_phone02,mys_phone03,name2,gr_phone01,gr_phone02,gr_phone03,jiwon,zipcode,addr01,addr02,university,major,fn_name,bank_nm,bank_ac,userip,rDate,rTime,upfile01,realfile01,upfile02,realfile02,upfile03,realfile03,upfile04,realfile04,upfile05,realfile05,upfile06,realfile06,upfile07,realfile07,upfile08,realfile08,dupInfo,mtype,upfile09,realfile09,progress,student_id,memo) values ";
 		$sql .= "('$applicant_name','$applicant_bDate','$name','$bDate','$sex','$mys_phone01','$mys_phone02','$mys_phone03','$name2','$gr_phone01','$gr_phone02','$gr_phone03','$jiwon','$zipcode','$addr01','$addr02','$university','$major','$fn_name','$bank_nm','$bank_ac','$userip','$rDate','$rTime','$upfile01','$realfile01','$upfile02','$realfile02','$upfile03','$realfile03','$upfile04','$realfile04','$upfile05','$realfile05','$upfile06','$realfile06','$upfile07','$realfile07','$upfile08','$realfile08','$dupInfo','$mtype','$upfile09','$realfile09','접수완료','$student_id','$memo')";
-		$result = mysqli_query($dbc,$sql);
+		$result = mysql_query($sql);
 
 		Msg::GblMsgBoxParent("신청이 완료되었습니다.","location.href='/sub03/sub03.php';");
 //		Msg::GblMsgBoxParent("관리자 승인 후 로그인 및 서비스 이용이 가능합니다.","location.href='/';");
@@ -100,7 +100,7 @@ if($type == 'write'){
 	$sql .= "memo='$memo' ";
 
 	$sql .= "where uid=$uid";
-	$result = mysqli_query($dbc,$sql);
+	$result = mysql_query($sql);
 
 
 	if($sub03=='1'){
@@ -123,8 +123,8 @@ if($type == 'write'){
 
 }elseif($type == 'del'){
 	$sql = "select * from ks_bangab2 where uid='$uid'";
-	$result = mysqli_query($dbc,$sql);
-	$row = mysqli_fetch_array($result);
+	$result = mysql_query($sql);
+	$row = mysql_fetch_array($result);
 	
 	for($i=1; $i<=$tot_num; $i++){
 		$file_num = sprintf("%02d",$i);
@@ -134,7 +134,7 @@ if($type == 'write'){
 	}
 			
 	$sql = "delete from ks_bangab2 where uid='$uid'";
-	$result = mysqli_query($dbc,$sql);
+	$result = mysql_query($sql);
 
 	Msg::goKorea("/adm/bangab2/up_index.php");
 	exit;
@@ -145,8 +145,8 @@ if($type == 'write'){
 		$uid = $chk[$k];
 
 		$sql = "select * from ks_bangab2 where uid='$uid'";
-		$result = mysqli_query($dbc,$sql);
-		$row = mysqli_fetch_array($result);
+		$result = mysql_query($sql);
+		$row = mysql_fetch_array($result);
 
 		for($i=1; $i<=$tot_num; $i++){
 			$file_num = sprintf("%02d",$i);
@@ -156,7 +156,7 @@ if($type == 'write'){
 		}
 
 			$sql = "delete from ks_bangab2 where uid='$uid'";
-			$result = mysqli_query($dbc,$sql);
+			$result = mysql_query($sql);
 	}
 
 	Msg::goKorea('/adm/');
@@ -164,8 +164,8 @@ if($type == 'write'){
 } elseif($type == 'self_del'){
 	
 	$sql = "select * from ks_bangab2 where uid='$uid'";
-	$result = mysqli_query($dbc,$sql);
-	$row = mysqli_fetch_array($result);
+	$result = mysql_query($sql);
+	$row = mysql_fetch_array($result);
 
 	$applicant_name = $row['applicant_name'];
 	$applicant_bDate = $row['applicant_bDate'];
@@ -224,11 +224,11 @@ if($type == 'write'){
 
 	$sql = "insert into ks_bangab2_del (applicant_name,applicant_bDate,name,bDate,mys_phone01,mys_phone02,mys_phone03,name2,gr_phone01,gr_phone02,gr_phone03,jiwon,zipcode,addr01,addr02,university,major,fn_name,bank_nm,bank_ac,upfile01,realfile01,upfile02,realfile02,upfile03,realfile03,upfile04,realfile04,upfile05,realfile05,upfile06,realfile06,upfile07,realfile07,upfile08,realfile08,upfile09,realfile09,student_id,rDate,rTime,cDate,cTime,userip,memo) values";
 	$sql .= "('$applicant_name','$applicant_bDate','$name','$bDate','$mys_phone01','$mys_phone02','$mys_phone03','$name2','$gr_phone01','$gr_phone02','$gr_phone03','$jiwon','$zipcode','$addr01','$addr02','$university','$major','$fn_name','$bank_nm','$bank_ac','$upfile01','$realfile01','$upfile02','$realfile02','$upfile03','$realfile03','$upfile04','$realfile04','$upfile05','$realfile05','$upfile06','$realfile06','$upfile07','$realfile07','$upfile08','$realfile08','$upfile09','$realfile09','$student_id','$rDate','$rTime','$cDate','$cTime','$userip','$memo')";
-	$result = mysqli_query($dbc,$sql);
+	$result = mysql_query($sql);
 
 
 	$sql = "delete from ks_bangab2 where uid='$uid'";
-	$result = mysqli_query($dbc,$sql);
+	$result = mysql_query($sql);
 
 
 	Msg::GblMsgBoxParent("신청이 취소되었습니다.","location.href='/sub03/sub03.php';");

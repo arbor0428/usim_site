@@ -6,6 +6,11 @@
 ?>
 <div class="wrap">
 	<header class="header">
+	<?
+		if($_SERVER['REMOTE_ADDR'] == '106.246.92.237'){
+			echo $GBL_USERID;
+		}
+	?>
 		<div class="h_top dp_f dp_c">
 			<div class="h_center dp_sb dp_c">
 				<div id="google_translate_element"></div>
@@ -27,7 +32,17 @@
 							<li><a href="/sub07/sub01.php" title="1:1 상담">1:1 상담</a></li>
 						</ul>
 						<div class="memberBtnWrap dp_f">
+							<?
+								if(!$GBL_USERID){
+							?>
 							<a class="dp_f dp_c dp_cc memberBtn blue01 c_w" href="/member/login.php" title="로그인">로그인</a>
+							<?
+								} else {	
+							?>
+							<a class="dp_f dp_c dp_cc memberBtn blue01 c_w" href="/module/login/logout_proc.php" title="로그아웃">로그아웃</a>
+							<?
+								}	
+							?>
 							<a class="dp_f dp_c dp_cc memberBtn c_blue" href="/member/join1.php" title="회원가입">회원가입</a>
 						</div>
 					</div>
@@ -45,10 +60,10 @@
 		<div class="h_bot">
 			<div class="h_center">
 				<ul class="fav_menu dp_f">
-					<li><a href="/sub01/joinPrice_step0.php" title="요금제가입">요금제가입</a></li>
-					<li><a href="/sub02/sub01.php" title="유심구매">유심구매</a></li>
-					<li><a href="/sub03/sub01.php" title="충전">충전</a></li>
-					<li><a href="/sub04/sub01.php" title="이벤트">이벤트</a></li>
+					<li><a href="" title="요금제가입" data_seq="secMove01">요금제가입</a></li>
+					<li><a href="" title="유심구매" data_seq="secMove02">유심구매</a></li>
+					<li><a href="" title="충전" data_seq="secMove03">충전</a></li>
+					<li><a href="" title="이벤트" data_seq="secMove04">이벤트</a></li>
 				</ul>
 			</div>
 		</div>
